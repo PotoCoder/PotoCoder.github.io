@@ -8,20 +8,21 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>位运算 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="LeetCode中关于位运算的题目。">
+  <meta name="description" content="双指针主要用于遍历数组，两个指针指向不同的元素，从而协同完成任务。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="位运算">
-<meta property="og:url" content="http://yoursite.com/2020/07/01/%E4%BD%8D%E8%BF%90%E7%AE%97/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/07/03/%E5%8F%8C%E6%8C%87%E9%92%88/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="LeetCode中关于位运算的题目。">
+<meta property="og:description" content="双指针主要用于遍历数组，两个指针指向不同的元素，从而协同完成任务。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/4/17317a75abb0c52a?w=879&amp;h=841&amp;f=png&amp;s=13146">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/4/17317a7f242c5bfc?w=1606&amp;h=844&amp;f=png&amp;s=82227">
-<meta property="article:published_time" content="2020-07-01T03:43:59.000Z">
-<meta property="article:modified_time" content="2020-07-04T14:22:23.450Z">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/4/1731a28ec7a081e7?w=531&h=171&f=png&s=11301">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/4/1731a2d3e43476bc?w=2732&amp;h=1250&amp;f=png&amp;s=63919">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/4/1731a2ee17f2df88?w=2732&amp;h=1282&amp;f=png&amp;s=66025">
+<meta property="article:published_time" content="2020-07-03T03:43:59.000Z">
+<meta property="article:modified_time" content="2020-07-04T14:22:53.175Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2020/7/4/17317a75abb0c52a?w=879&amp;h=841&amp;f=png&amp;s=13146">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2020/7/4/1731a28ec7a081e7?w=531&h=171&f=png&s=11301">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -160,7 +161,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-位运算" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-双指针" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -172,193 +173,130 @@
   
 
         
-        <a href="/2020/07/01/%E4%BD%8D%E8%BF%90%E7%AE%97/" class="archive-article-date">
-  	<time datetime="2020-07-01T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
+        <a href="/2020/07/03/%E5%8F%8C%E6%8C%87%E9%92%88/" class="archive-article-date">
+  	<time datetime="2020-07-03T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p> LeetCode中关于位运算的题目。</p>
+        <p>双指针主要用于遍历数组，两个指针指向不同的元素，从而协同完成任务。 </p>
 <a id="more"></a> 
 
-<h3 id="0-原理"><a href="#0-原理" class="headerlink" title="0. 原理"></a>0. 原理</h3><ul>
-<li><strong>基本原理</strong></li>
+<h3 id="1-1-有序数组中的两数之和"><a href="#1-1-有序数组中的两数之和" class="headerlink" title="1.1 有序数组中的两数之和"></a>1.1 <a href="https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/" target="_blank" rel="noopener">有序数组中的两数之和</a></h3><p>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。<br>函数应该返回这两个下标值 <code>index1</code> 和 <code>index2</code>，其中 <code>index1</code> 必须小于 <code>index2</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">返回的下标值（index1 和 index2）不是从零开始的。</span><br><span class="line">你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: numbers &#x3D; [2, 7, 11, 15], target &#x3D; 9</span><br><span class="line">输出: [1,2]</span><br><span class="line">解释: 2 与 7 之和等于目标数 9 。因此 index1 &#x3D; 1, index2 &#x3D; 2 。</span><br></pre></td></tr></table></figure>
+
+<p>使用双指针，一个指针指向值较小的元素，一个指针指向值较大的元素。指向较小元素的指针从头向尾遍历，指向较大元素的指针从尾向头遍历。</p>
+<ul>
+<li>如果两个指针指向元素的和 <code>sum == target</code>，那么得到要求的结果；</li>
+<li>如果 <code>sum &gt; target</code>，移动较大的元素，使 <code>sum</code> 变小一些；</li>
+<li>如果 <code>sum &lt; target</code>，移动较小的元素，使 <code>sum</code> 变大一些。</li>
 </ul>
-<p>0s 表示一串 0，1s 表示一串 1。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x ^ 0s &#x3D; x      x &amp; 0s &#x3D; 0      x | 0s &#x3D; x</span><br><span class="line">x ^ 1s &#x3D; ~x     x &amp; 1s &#x3D; x      x | 1s &#x3D; 1s</span><br><span class="line">x ^ x &#x3D; 0       x &amp; x &#x3D; x       x | x &#x3D; x</span><br></pre></td></tr></table></figure>
+<p>数组中的元素最多遍历一次，时间复杂度为 <code>O(N)</code>。只使用了两个额外变量，空间复杂度为 <code>O(1)</code>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, numbers: List[int], target: int)</span> -&gt; List[int]:</span></span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = len(numbers) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> left &lt;= right:</span><br><span class="line">            sum_ = numbers[left] + numbers[right]</span><br><span class="line">            <span class="keyword">if</span> sum_ == target:</span><br><span class="line">                <span class="keyword">return</span> [left + <span class="number">1</span>, right + <span class="number">1</span>]  <span class="comment"># 题目要求索引是从 1 开始的</span></span><br><span class="line">            <span class="keyword">elif</span> sum_ &lt; target:</span><br><span class="line">                left += <span class="number">1</span>  <span class="comment"># 让 sum_ 小一点</span></span><br><span class="line">            <span class="keyword">elif</span> sum_ &gt; target:</span><br><span class="line">                right -= <span class="number">1</span>  <span class="comment"># 让 sum_ 大一点</span></span><br><span class="line">        <span class="keyword">return</span> [<span class="number">-1</span>, <span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-2-无序数组中的两数之和"><a href="#1-2-无序数组中的两数之和" class="headerlink" title="1.2 无序数组中的两数之和"></a>1.2 <a href="https://leetcode-cn.com/problems/two-sum" target="_blank" rel="noopener">无序数组中的两数之和</a></h3><p>给定一个整数数组 <code>nums</code> 和一个目标值 <code>target</code>，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">给定 nums &#x3D; [2, 7, 11, 15], target &#x3D; 9</span><br><span class="line">因为 nums[0] + nums[1] &#x3D; 2 + 7 &#x3D; 9</span><br><span class="line">所以返回 [0, 1]</span><br></pre></td></tr></table></figure>
+
+<p><strong>1. 暴力法：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(nums, target)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums) - <span class="number">1</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, len(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[i] + nums[j]:</span><br><span class="line">                <span class="keyword">return</span> [i, j]</span><br><span class="line">    <span class="keyword">return</span> [<span class="number">-1</span>, <span class="number">-1</span>]  <span class="comment"># 不存在这么两数</span></span><br></pre></td></tr></table></figure>
+
+<p>这个解法非常直接，时间复杂度 <code>O(N^2)</code>，空间复杂度 <code>O(1)</code>。</p>
+<p><strong>2. 哈希表：</strong></p>
+<p>通过一个哈希表减少时间复杂度：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(nums, target)</span>:</span></span><br><span class="line">    hashmap=&#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> index, num <span class="keyword">in</span> enumerate(nums):  <span class="comment"># 构造一个哈希表，元素映射到相应的索引</span></span><br><span class="line">        hashmap[num] = index</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">for</span> i, num <span class="keyword">in</span> enumerate(nums):</span><br><span class="line">        j = hashmap.get(target - num)</span><br><span class="line">        <span class="keyword">if</span> j <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">and</span> i != j:  <span class="comment"># 如果 j 存在且不是 i 本身</span></span><br><span class="line">            <span class="keyword">return</span> [i, j]</span><br></pre></td></tr></table></figure>
+
+<p>由于哈希表的查询时间为 O(1)，算法的时间复杂度降低到 <code>O(N)</code>，但是需要 <code>O(N)</code> 的空间复杂度来存储哈希表。不过综合来看，是要比暴力解法高效的。</p>
+<h3 id="2-两数平方和"><a href="#2-两数平方和" class="headerlink" title="2.  两数平方和"></a>2.  <a href="https://leetcode-cn.com/problems/sum-of-square-numbers" target="_blank" rel="noopener">两数平方和</a></h3><p>给定一个非负整数 c ，你要判断是否存在两个整数 a 和 b，使得 <code>a2 + b2 = c</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入: 5</span><br><span class="line">输出: True</span><br><span class="line">解释: 1 * 1 + 2 * 2 &#x3D; 5</span><br><span class="line"></span><br><span class="line">输入: 3</span><br><span class="line">输出: False</span><br></pre></td></tr></table></figure>
+
+<p>可以看成是在元素为 <code>0 — c</code> 的有序数组中查找两个数，使得这两个数的平方和为 c，如果能找到，则返回 <code>true</code>，表示 c 是两个整数的平方和。 </p>
+<p>事实上，右指针并不需要初始化到 c，初始化到 <code>int(sqrt(c))</code> 即可。</p>
+<p>因为最多只需要遍历一次 <code>0 — int(sqrt(c))</code>，所以时间复杂度为 <code>O(int(sqrt(c)))</code>。又因为只使用了两个额外的变量，因此空间复杂度为 <code>O(1)</code>。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">judgeSquareSum</span><span class="params">(self, c: int)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">if</span> c &lt; <span class="number">0</span>: <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        left, right = <span class="number">0</span>, int(sqrt(c))</span><br><span class="line">        <span class="keyword">while</span> left &lt;= right:</span><br><span class="line">            sum_ = left ** <span class="number">2</span> + right ** <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> sum_ == c:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">elif</span> sum_ &lt; c:</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-反转字符串中的元音字符"><a href="#3-反转字符串中的元音字符" class="headerlink" title="3. 反转字符串中的元音字符"></a>3. <a href="https://leetcode-cn.com/problems/reverse-vowels-of-a-string/" target="_blank" rel="noopener">反转字符串中的元音字符</a></h3><p>编写一个函数，以字符串作为输入，反转该字符串中的元音字母。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;hello&quot;</span><br><span class="line">输出: &quot;holle&quot;</span><br><span class="line"></span><br><span class="line">输入: &quot;leetcode&quot;</span><br><span class="line">输出: &quot;leotcede&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用双指针：</strong></p>
+<p>一个指针从头向尾遍历，一个指针从尾到头遍历，当两个指针都遍历到元音字符时，交换这两个元音字符。</p>
+<p>为了快速判断一个字符是不是元音字符，我们将全部元音字符添加到集合 <code>vowel</code> 中，从而以 <code>O(1)</code> 的时间复杂度进行该操作。</p>
+<ul>
+<li>时间复杂度为 <code>O(N)</code>：只需要遍历所有元素一次</li>
+<li>空间复杂度 <code>O(1)</code>：只需要使用两个额外变量</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseVowels</span><span class="params">(self, s: str)</span> -&gt; str:</span></span><br><span class="line">        vowel = &#123;<span class="string">'a'</span>, <span class="string">'e'</span>, <span class="string">'i'</span>, <span class="string">'o'</span>, <span class="string">'u'</span>, <span class="string">'A'</span>, <span class="string">'E'</span>, <span class="string">'I'</span>, <span class="string">'O'</span>, <span class="string">'U'</span>&#125;</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> s: <span class="keyword">return</span> <span class="string">""</span></span><br><span class="line">        left, right = <span class="number">0</span>, len(s) - <span class="number">1</span></span><br><span class="line">        res = [<span class="literal">None</span>] * len(s)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> left &lt;= right:</span><br><span class="line">            <span class="keyword">if</span> s[left] <span class="keyword">not</span> <span class="keyword">in</span> vowel:</span><br><span class="line">                res[left] = s[left]</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> s[right] <span class="keyword">not</span> <span class="keyword">in</span> vowel:</span><br><span class="line">                res[right] = s[right]</span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                res[left] = s[right]</span><br><span class="line">                res[right] = s[left]</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">''</span>.join(res)</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用栈：</strong></p>
+<p>利用栈<strong>先进后出</strong>的特点，将字符串 s 中的元音字符存入栈中。循环遍历字符串元素，当遇到元音字符时，从栈中弹出的元素即为此元音字符所要反转的字符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseVowels</span><span class="params">(self, s: str)</span> -&gt; str:</span></span><br><span class="line">        vowel = &#123;<span class="string">'a'</span>, <span class="string">'e'</span>, <span class="string">'i'</span>, <span class="string">'o'</span>, <span class="string">'u'</span>, <span class="string">'A'</span>, <span class="string">'E'</span>, <span class="string">'I'</span>, <span class="string">'O'</span>, <span class="string">'U'</span>&#125;</span><br><span class="line">        ls = []</span><br><span class="line">        vs = [i <span class="keyword">for</span> i <span class="keyword">in</span> s <span class="keyword">if</span> i <span class="keyword">in</span> vowel]  <span class="comment"># 将 s 中的元音字符存入栈中</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> i <span class="keyword">not</span> <span class="keyword">in</span> vowel:</span><br><span class="line">                ls.append(i)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                ls.append(vs.pop())</span><br><span class="line">        <span class="keyword">return</span> <span class="string">''</span>.join(ls)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-回文字符串"><a href="#4-回文字符串" class="headerlink" title="4. 回文字符串"></a>4. <a href="https://leetcode-cn.com/problems/valid-palindrome-ii/" target="_blank" rel="noopener">回文字符串</a></h3><p>给定一个非空字符串 s，最多删除一个字符。判断是否能成为回文字符串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;aba&quot;</span><br><span class="line">输出: True</span><br><span class="line"></span><br><span class="line">输入: &quot;abca&quot;</span><br><span class="line">输出: True</span><br><span class="line">解释: 你可以删除c字符。</span><br><span class="line"></span><br><span class="line">注意:字符串只包含从 a-z 的小写字母。字符串的最大长度是50000。</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>利用 x ^ 1s = ~x 的特点，可以将一个数的位级表示<strong>翻转</strong>；</li>
-<li>利用 x ^ x = 0 的特点，可以<strong>将三个数中重复的两个数去除</strong>，只留下另一个数。</li>
+<li>本题的关键是处理删除一个字符。在使用双指针遍历字符串时，如果出现两个指针指向的字符不相等的情况，我们就试着删除一个字符，再判断删除完之后的字符串是否是回文字符串。</li>
+<li>在判断是否为回文字符串时，我们不需要判断整个字符串，因为左指针左边和右指针右边的字符之前已经判断过具有对称性质，所以只需要判断中间的子字符串即可。</li>
+<li>在试着删除字符时，我们既可以删除左指针指向的字符，也可以删除右指针指向的字符。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 ^ 1 ^ 2 &#x3D; 2</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>掩码操作</strong></li>
-</ul>
-<p>利用 x &amp; 0s = 0 和 x &amp; 1s = x 的特点，可以实现<strong>掩码操作</strong>。</p>
-<p>一个数 num 与 mask：00111100 进行位与操作，只保留 num 中与 mask 的 1 部分相对应的位。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">01011011 &amp;</span><br><span class="line">00111100</span><br><span class="line">--------</span><br><span class="line">00011000</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>设值操作</strong></li>
-</ul>
-<p>利用 x | 0s = x 和 x | 1s = 1s 的特点，可以实现设值操作。</p>
-<ul>
-<li>一个数 num 与 mask：00111100 进行位或操作，将 num 中与 mask 的 1 部分相对应的位都设置为 1。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">01011011 |</span><br><span class="line">00111100</span><br><span class="line">--------</span><br><span class="line">01111111</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>算法常用操作 n &amp; (n-1)</strong></li>
-</ul>
-<p>这个操作是算法中常见的，作用是<strong>消除数字 n 的二进制表示中的最后一个 1</strong>。</p>
-<p>看个图就很容易理解了：</p>
-<img src="https://user-gold-cdn.xitu.io/2020/7/4/17317a75abb0c52a?w=879&amp;h=841&amp;f=png&amp;s=13146" style="zoom:50%;" />
-
-<ul>
-<li><strong>算法常用操作 n &amp; (-n)</strong></li>
-</ul>
-<p><strong>n&amp;(-n) 得到 n 的位级表示中最低的那一位 1</strong>。-n 得到 n 的反码加 1，也就是 <strong>-n=~n+1</strong>。例如对于二进制表示 10110100，-n 得到 01001100，相与得到 00000100。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">10110100 &amp;</span><br><span class="line">01001100</span><br><span class="line">--------</span><br><span class="line">00000100</span><br></pre></td></tr></table></figure>
-
-<p>n-(n&amp;(-n)) 则可以去除 n 的位级表示中最低的那一位 1，和 n&amp;(n-1) 效果一样。</p>
-<ul>
-<li><strong>移位运算</strong></li>
-</ul>
-<p><strong>&gt;&gt; n 为算术右移</strong>，相当于<strong>除以 2n</strong>，例如 -7 &gt;&gt; 2 = -2。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">11111111111111111111111111111001  &gt;&gt; 2</span><br><span class="line">--------</span><br><span class="line">11111111111111111111111111111110</span><br></pre></td></tr></table></figure>
-
-<p><strong>&lt;&lt; n 为算术左移，相当于乘以 2n</strong>。-7 &lt;&lt; 2 = -28。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">11111111111111111111111111111001  &lt;&lt; 2</span><br><span class="line">--------</span><br><span class="line">11111111111111111111111111100100</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>mask 计算</strong></li>
-</ul>
-<p>要获取 111111111，将 0 取反即可，~0。</p>
-<p>要得到只有第 i 位为 1 的 mask，将 1 向左移动 i-1 位即可，1&lt;&lt;(i-1) 。例如 1&lt;&lt;4 得到只有第 5 位为 1 的 mask ：00010000。</p>
-<p>要得到 1 到 i 位为 1 的 mask，(1&lt;&lt;i)-1 即可，例如将 (1&lt;&lt;4)-1 = 00010000-1 = 00001111。</p>
-<p>要得到 1 到 i 位为 0 的 mask，只需将 1 到 i 位为 1 的 mask 取反，即 ~((1&lt;&lt;i)-1)。</p>
-<h3 id="1-统计两个数的二进制表示有多少位不同"><a href="#1-统计两个数的二进制表示有多少位不同" class="headerlink" title="1. 统计两个数的二进制表示有多少位不同"></a>1. <a href="https://leetcode-cn.com/problems/hamming-distance/" target="_blank" rel="noopener">统计两个数的二进制表示有多少位不同</a></h3><p>两个整数之间的<a href="https://baike.baidu.com/item/汉明距离" target="_blank" rel="noopener">汉明距离</a>指的是这两个数字对应二进制位不同的位置的数目。</p>
-<p>给出两个整数 <code>x</code> 和 <code>y</code>，计算它们之间的汉明距离。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入: x &#x3D; 1, y &#x3D; 4</span><br><span class="line">输出: 2</span><br><span class="line">解释:</span><br><span class="line">1   (0 0 0 1)</span><br><span class="line">4   (0 1 0 0)</span><br><span class="line">       ↑   ↑</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>对两个数进行<strong>异或</strong>操作，得到结果为两个数中<strong>不同的位置为 1</strong>，相同位置为 0，<strong>统计有多少个 1 即可</strong>,。统计时可以使用<strong>右移消除数中右边的 1</strong>，同时左边会自动补 0，判断末位是否为 1 时可以使用取模运算 <code>(z % 2)</code> 或者与运算 <code>(z &amp; 1)</code>。</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hammingDistance</span><span class="params">(self, x: int, y: int)</span> -&gt; int:</span></span><br><span class="line">        z = x ^ y</span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> z != <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> (z &amp; <span class="number">1</span>) == <span class="number">1</span>:</span><br><span class="line">                ans += <span class="number">1</span></span><br><span class="line">            z = z &gt;&gt; <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>使用 <code>z &amp; (z-1)</code> 去除 z 位级表示最低的那一位。 </li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hammingDistance</span><span class="params">(self, x: int, y: int)</span> -&gt; int:</span></span><br><span class="line">    z = x ^ y</span><br><span class="line">    ans = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> z != <span class="number">0</span>:</span><br><span class="line">        z = z &amp; (z - <span class="number">1</span>)</span><br><span class="line">        ans += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">validPalindrome</span><span class="params">(self, s: str)</span> -&gt; bool:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span><span class="params">(s, i, j)</span>:</span></span><br><span class="line">            <span class="keyword">while</span> i &lt; j:</span><br><span class="line">                <span class="keyword">if</span> s[i] != s[j]:</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">                j -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">        left, right = <span class="number">0</span>, len(s) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> left &lt; right:</span><br><span class="line">            <span class="keyword">if</span> s[left] != s[right]:</span><br><span class="line">                <span class="keyword">return</span> isPalindrome(s, left, right - <span class="number">1</span>) <span class="keyword">or</span> isPalindrome(s, left + <span class="number">1</span>, right)</span><br><span class="line">            left += <span class="number">1</span></span><br><span class="line">            right -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="2-数组中唯一一个不重复的元素"><a href="#2-数组中唯一一个不重复的元素" class="headerlink" title="2. 数组中唯一一个不重复的元素"></a>2. <a href="https://leetcode-cn.com/problems/single-number/description/" target="_blank" rel="noopener">数组中唯一一个不重复的元素</a></h3><p>给定一个<strong>非空</strong>整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [4,1,2,1,2]</span><br><span class="line">输出: 4</span><br></pre></td></tr></table></figure>
+<h3 id="5-归并两个有序数组"><a href="#5-归并两个有序数组" class="headerlink" title="5. 归并两个有序数组"></a>5. <a href="https://leetcode-cn.com/problems/merge-sorted-array/description/" target="_blank" rel="noopener">归并两个有序数组</a></h3><p>给你两个有序整数数组 nums1 和 nums2，请你将 nums2 合并到 nums1 中，使 nums1 成为一个有序数组。</p>
+<p>初始化 nums1 和 nums2 的元素数量分别为 m 和 n 。<br>你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">nums1 &#x3D; [1,2,3,0,0,0], m &#x3D; 3</span><br><span class="line">nums2 &#x3D; [2,5,6],       n &#x3D; 3</span><br><span class="line">输出: [1,2,2,3,5,6]</span><br></pre></td></tr></table></figure>
 
-<p><strong>两个相同的数异或的结果为 0</strong>，对所有数进行<strong>异或</strong>操作，最后的<strong>结果就是单独出现的那个数</strong>。 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">singleNumber</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line">        res = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">            res = res ^ num</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="3-找出数组中缺失的那个数"><a href="#3-找出数组中缺失的那个数" class="headerlink" title="3. 找出数组中缺失的那个数"></a>3. <a href="https://leetcode-cn.com/problems/missing-number/description/" target="_blank" rel="noopener">找出数组中缺失的那个数</a></h3><p>给定一个包含 <code>0, 1, 2, ..., n</code> 中 <em>n</em> 个数的序列，找出 <code>0 .. *n*</code> 中没有出现在序列中的那个数。 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [9,6,4,2,3,5,7,0,1]</span><br><span class="line">输出: 8</span><br></pre></td></tr></table></figure>
-
-<p>将数组中的元素与 <code>0..n</code> 中的每个元素进行异或，由于相同的元素异或为 0， 最后得到就是没有出现在序列中的那个数。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">missingNumber</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line">        res = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            res = res ^ i ^ nums[i]</span><br><span class="line">        <span class="keyword">return</span> res ^ len(nums)</span><br></pre></td></tr></table></figure>
+<p> 需要从尾开始遍历，否则在 <code>nums1</code> 上归并得到的值会覆盖还未进行归并比较的值。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">merge</span><span class="params">(self, nums1: List[int], m: int, nums2: List[int], n: int)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums1 in-place instead.</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        index1 = m - <span class="number">1</span></span><br><span class="line">        index2 = n - <span class="number">1</span></span><br><span class="line">        index_merge = m + n - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> index1 &gt;= <span class="number">0</span> <span class="keyword">or</span> index2 &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> index1 &lt; <span class="number">0</span>:</span><br><span class="line">                nums1[index_merge] = nums2[index2]</span><br><span class="line">                index2 -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> index2 &lt; <span class="number">0</span>:</span><br><span class="line">                nums1[index_merge] = nums1[index1]</span><br><span class="line">                index1 -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> nums1[index1] &gt; nums2[index2]:</span><br><span class="line">                nums1[index_merge] = nums1[index1]</span><br><span class="line">                index1 -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                nums1[index_merge] = nums2[index2]</span><br><span class="line">                index2 -= <span class="number">1</span></span><br><span class="line">            index_merge -= <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="4-数组中不重复的两个元素"><a href="#4-数组中不重复的两个元素" class="headerlink" title="4. 数组中不重复的两个元素"></a>4. <a href="https://leetcode-cn.com/problems/single-number-iii/description/" target="_blank" rel="noopener">数组中不重复的两个元素</a></h3><p>给定一个整数数组 <code>nums</code>，其中恰好有两个元素只出现一次，其余所有元素均出现两次。 找出只出现一次的那两个元素。 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,2,1,3,2,5]</span><br><span class="line">输出: [3,5]</span><br></pre></td></tr></table></figure>
+<h3 id="6-1-判断链表是否有环"><a href="#6-1-判断链表是否有环" class="headerlink" title="6.1 判断链表是否有环"></a>6.1 <a href="https://leetcode-cn.com/problems/linked-list-cycle" target="_blank" rel="noopener">判断链表是否有环</a></h3><p>给定一个链表，判断链表中是否有环。</p>
+<p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head &#x3D; [3,2,0,-4], pos &#x3D; 1</span><br><span class="line">输出：true</span><br><span class="line">解释：链表中有一个环，其尾部连接到第二个节点。</span><br></pre></td></tr></table></figure>
 
-<p>将所有元素进行<strong>异或运算</strong>，得到两个不重复元素的异或值，也就是这两个元素中不相同的部分为1 的数，<strong><code>n &amp; (-n)</code>得到 n 的位级表示中最低的那一位 1</strong>，这个 1 只可能来自两个不重复元素中的一个 (就算重复数的二进制数中也有可能包含这个 1，但通过 <code>x ^= num</code> 的异或操作便消除)。</p>
-<img src="https://user-gold-cdn.xitu.io/2020/7/4/17317a7f242c5bfc?w=1606&amp;h=844&amp;f=png&amp;s=82227" style="zoom: 33%;" />
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">singleNumber</span><span class="params">(self, nums: int)</span> -&gt; List[int]:</span></span><br><span class="line">        <span class="comment"># difference between two numbers (x and y) which were seen only once</span></span><br><span class="line">        bitmask = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">            bitmask ^= num</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># rightmost 1-bit diff between x and y</span></span><br><span class="line">        diff = bitmask &amp; (-bitmask)</span><br><span class="line">        </span><br><span class="line">        x = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="comment"># bitmask which will contain only x</span></span><br><span class="line">            <span class="keyword">if</span> num &amp; diff:</span><br><span class="line">                x ^= num</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> [x, bitmask^x]</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="5-反转一个数的比特数"><a href="#5-反转一个数的比特数" class="headerlink" title="5. 反转一个数的比特数"></a>5. <a href="https://leetcode-cn.com/problems/reverse-bits/" target="_blank" rel="noopener">反转一个数的比特数</a></h3><p>颠倒给定的 32 位无符号整数的二进制位。 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: 00000010100101000001111010011100</span><br><span class="line">输出: 00111001011110000010100101000000</span><br><span class="line">解释: 输入的二进制串 00000010100101000001111010011100 表示无符号整数 43261596，</span><br><span class="line">     因此返回 964176192，其二进制表示形式为 00111001011110000010100101000000。</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>从左到右遍历字符串 <code>n &gt;&gt; 1</code></li>
-<li>将末位元素反转到对应的位置 <code>(n &amp; 1) &lt;&lt; power</code></li>
-<li>当 <code>n == 0</code> 时，迭代终止</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseBits</span><span class="params">(self, n: int)</span> -&gt; int:</span></span><br><span class="line">        res = <span class="number">0</span></span><br><span class="line">        power = <span class="number">31</span></span><br><span class="line">        <span class="keyword">while</span> n:</span><br><span class="line">            res += (n &amp; <span class="number">1</span>) &lt;&lt; power</span><br><span class="line">            n &gt;&gt;= <span class="number">1</span></span><br><span class="line">            power -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<p>使用<strong>快慢指针</strong>，一个跑得快，一个跑得慢。如果不含有环，跑得快的那个指针最终会遇到 <code>None</code>，说明链表不含环；如果含有环，快指针最终会超慢指针一圈，和慢指针相遇，说明链表含有环。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hasCycle</span><span class="params">(self, head: ListNode)</span> -&gt; bool:</span></span><br><span class="line">        fast = slow = head</span><br><span class="line">        <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            fast = fast.next.next</span><br><span class="line">            slow = slow.next</span><br><span class="line">            <span class="keyword">if</span> fast == slow:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="6-不适用额外变量交换两个整数"><a href="#6-不适用额外变量交换两个整数" class="headerlink" title="6. 不适用额外变量交换两个整数"></a>6. 不适用额外变量交换两个整数</h3><p>利用相同数异或为 0 。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = a ^ b</span><br><span class="line">b = a ^ b</span><br><span class="line">a = a ^ b</span><br></pre></td></tr></table></figure>
+<h3 id="6-2-链表中环的起点"><a href="#6-2-链表中环的起点" class="headerlink" title="6.2 链表中环的起点"></a>6.2 <a href="https://leetcode-cn.com/problems/linked-list-cycle-ii" target="_blank" rel="noopener">链表中环的起点</a></h3><p>给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。</p>
+<p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。</p>
+<p>说明：不允许修改给定的链表。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head &#x3D; [3,2,0,-4], pos &#x3D; 1</span><br><span class="line">输出：tail connects to node index 1</span><br><span class="line">解释：链表中有一个环，其尾部连接到第二个节点。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a28ec7a081e7?w=531&h=171&f=png&s=11301" alt=""></p>
+<p><strong>当快慢指针相遇时，让其中任一个指针指向头节点，然后让它俩以相同速度前进，再次相遇时所在的节点位置就是环开始的位置。</strong></p>
+<p>第一次相遇时，假设慢指针 <strong>slow 走了 k 步</strong>，那么快指针 <strong>fast 一定走了 2k 步</strong>，也就是说比 slow 多走了 k 步（也就是环的长度）。 </p>
+<img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a2d3e43476bc?w=2732&amp;h=1250&amp;f=png&amp;s=63919" style="zoom: 25%;" />
+
+<p>设相遇点距环的起点的距离为 m，那么环的起点距头结点 head 的距离为 k - m，也就是说如果从 head 前进 k - m 步就能到达环起点。</p>
+<p>巧的是，如果从相遇点继续前进 k - m 步，也恰好到达环起点。</p>
+<img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a2ee17f2df88?w=2732&amp;h=1282&amp;f=png&amp;s=66025" style="zoom: 25%;" />
+
+<p>所以，只要我们把快慢指针中的任一个重新指向 head，然后两个指针同速前进，k - m 步后就会相遇，相遇之处就是环的起点了。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">detectCycle</span><span class="params">(self, head: ListNode)</span> -&gt; ListNode:</span></span><br><span class="line">        fast = slow = head</span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">if</span> fast == <span class="literal">None</span> <span class="keyword">or</span> fast.next == <span class="literal">None</span>:</span><br><span class="line">                <span class="keyword">return</span> </span><br><span class="line">            fast = fast.next.next</span><br><span class="line">            slow = slow.next</span><br><span class="line">            <span class="keyword">if</span> fast == slow:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            </span><br><span class="line">        slow = head</span><br><span class="line">        <span class="keyword">while</span> slow != fast:</span><br><span class="line">            fast = fast.next</span><br><span class="line">            slow = slow.next</span><br><span class="line">        <span class="keyword">return</span> slow</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="7-判断一个数是不是-2-的-n-次方"><a href="#7-判断一个数是不是-2-的-n-次方" class="headerlink" title="7. 判断一个数是不是 2 的 n 次方"></a>7. <a href="https://leetcode-cn.com/problems/power-of-two/" target="_blank" rel="noopener">判断一个数是不是 2 的 n 次方</a></h3><p>给定一个整数，编写一个函数来判断它是否是 2 的幂次方。 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: 1</span><br><span class="line">输出: true</span><br><span class="line">解释: 20 &#x3D; 1</span><br></pre></td></tr></table></figure>
+<h3 id="6-3-寻找链表的中点"><a href="#6-3-寻找链表的中点" class="headerlink" title="6.3 寻找链表的中点"></a>6.3 寻找链表的中点</h3><p>类似上面的思路，我们还可以让快指针一次前进两步，慢指针一次前进一步，当快指针到达链表尽头时，慢指针就处于链表的中间位置 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> fast <span class="keyword">or</span> fast.next:</span><br><span class="line">    fast = fast.next.next</span><br><span class="line">    slow = slow.next</span><br><span class="line"><span class="keyword">return</span> slow  <span class="comment"># slow 就在中间位置</span></span><br></pre></td></tr></table></figure>
 
-<p>如果一个数为 2 的 n 次方，则说明这个数的<strong>二进制形式只包含一个 1</strong>，利用 <code>n &amp; (n - 1)</code> 去除最低的一位 1，也就是次数中唯一的一个 1，去除之后为 0。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPowerOfTwo</span><span class="params">(self, n: int)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">return</span> n &gt; <span class="number">0</span> <span class="keyword">and</span> n &amp; (n - <span class="number">1</span>) == <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="8-判断一个数是不是-4-的-n-次方"><a href="#8-判断一个数是不是-4-的-n-次方" class="headerlink" title="8. 判断一个数是不是 4 的 n 次方"></a>8. <a href="https://leetcode-cn.com/problems/power-of-four/" target="_blank" rel="noopener">判断一个数是不是 4 的 n 次方</a></h3><p>给定一个整数 (32 位有符号整数)，请编写一个函数来判断它是否是 4 的幂次方。 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: 16</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
-
-<p>这种数在二进制表示中有且<strong>只有一个奇数位为 1</strong>，例如 16 (10000)。 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPowerOfFour</span><span class="params">(self, num: int)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">return</span> num &gt; <span class="number">0</span> <span class="keyword">and</span> num &amp; (num - <span class="number">1</span>) == <span class="number">0</span> <span class="keyword">and</span> (num &amp; <span class="number">0b01010101010101010101010101010101</span>) != <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>当链表的长度是奇数时，slow 恰巧停在中点位置；如果长度是偶数，slow 最终的位置是中间偏右。</p>
+<h3 id="6-4-寻找链表的倒数第-k-个元素"><a href="#6-4-寻找链表的倒数第-k-个元素" class="headerlink" title="6.4 寻找链表的倒数第 k 个元素"></a>6.4 寻找链表的倒数第 k 个元素</h3><p>思路还是使用快慢指针，<strong>让快指针先走 k 步，然后快慢指针开始同速前进</strong>。这样<strong>当快指针走到链表末尾 null 时，慢指针所在的位置就是倒数第 k 个链表节点</strong>（为了简化，假设 k 不会超过链表长度）： </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">slow = fast = head</span><br><span class="line"><span class="keyword">while</span> k &gt; <span class="number">0</span>:</span><br><span class="line">    fast = fast.next</span><br><span class="line">    k -= <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> fast != <span class="literal">None</span>:</span><br><span class="line">    slow = slow.next</span><br><span class="line">    fast = fast.next</span><br><span class="line"><span class="keyword">return</span> slow</span><br></pre></td></tr></table></figure>
 
 
-
-<h3 id="9-判断一个数的位级表示是否不会出现连续的-0-和-1"><a href="#9-判断一个数的位级表示是否不会出现连续的-0-和-1" class="headerlink" title="9. 判断一个数的位级表示是否不会出现连续的 0 和 1"></a>9. <a href="https://leetcode-cn.com/problems/binary-number-with-alternating-bits/" target="_blank" rel="noopener">判断一个数的位级表示是否不会出现连续的 0 和 1</a></h3><p>给定一个正整数，检查他是否为交替位二进制数：换句话说，就是他的二进制数相邻的两个位数永不相等。 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: 5</span><br><span class="line">输出: True</span><br><span class="line">解释:</span><br><span class="line">5的二进制数是: 101</span><br></pre></td></tr></table></figure>
-
-<p>对于 1010 这种位级表示的数，把它<strong>向右移动</strong> 1 位得到 101，这两个数每个位都不同，因此异或得到的结果为 1111，通过 <code>temp &amp; (temp + 1)</code> 是否为 0 可以判断异或的结果是否为<strong>全 1</strong>。 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hasAlternatingBits</span><span class="params">(self, n: int)</span> -&gt; bool:</span></span><br><span class="line">        temp = n ^ (n &gt;&gt; <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> temp &amp; (temp + <span class="number">1</span>) == <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="10-求一个数的补码"><a href="#10-求一个数的补码" class="headerlink" title="10. 求一个数的补码"></a>10. <a href="https://leetcode-cn.com/problems/number-complement/" target="_blank" rel="noopener">求一个数的补码</a></h3><p>给定一个正整数，输出它的补数。补数是对该数的二进制表示取反。 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: 5</span><br><span class="line">输出: 2</span><br><span class="line">解释: 5 的二进制表示为 101（没有前导零位），其补数为 010。所以你需要输出 2 。</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>对于 00000101，*<em>补码 = 00000101 ^ 00000111，也就是：补码 = 原码 ^ 掩码 *</em>。那么问题就转换为求掩码 00000111。 </li>
-<li>求掩码可以先<strong>求原数中最左边的 1 **表示的数，即 00000100，将其</strong>左移一位再 - 1**即可</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findComplement</span><span class="params">(self, num: int)</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> num == <span class="number">0</span>: <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">        mask = <span class="number">1</span> &lt;&lt; <span class="number">30</span></span><br><span class="line">        <span class="keyword">while</span> num &amp; mask == <span class="number">0</span>:</span><br><span class="line">            mask &gt;&gt;= <span class="number">1</span>  <span class="comment"># 找到原数中最左边的 1</span></span><br><span class="line">        mask = (mask &lt;&lt; <span class="number">1</span>) - <span class="number">1</span>  <span class="comment"># 得到掩码</span></span><br><span class="line">        <span class="keyword">return</span> num ^ mask</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="11-实现整数的加法"><a href="#11-实现整数的加法" class="headerlink" title="11. 实现整数的加法"></a>11. <a href="https://leetcode-cn.com/problems/sum-of-two-integers/description/" target="_blank" rel="noopener">实现整数的加法</a></h3><p><strong>不使用</strong>运算符 <code>+</code> 和 <code>-</code> ，计算两整数 <code>a</code> 、<code>b</code> 之和。 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: a &#x3D; 1, b &#x3D; 2</span><br><span class="line">输出: 3</span><br></pre></td></tr></table></figure>
-
-<p>a ^ b 表示没有考虑进位的情况下两数的和，(a &amp; b) &lt;&lt; 1 就是进位。 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getSum</span><span class="params">(self, a: int, b: int)</span> -&gt; int:</span></span><br><span class="line">        a &amp;= <span class="number">0xFFFFFFFF</span></span><br><span class="line">        b &amp;= <span class="number">0xFFFFFFFF</span></span><br><span class="line">        <span class="keyword">while</span> b:</span><br><span class="line">            carry = a &amp; b</span><br><span class="line">            a ^= b</span><br><span class="line">            b = ((carry) &lt;&lt; <span class="number">1</span>) &amp; <span class="number">0xFFFFFFFF</span>  <span class="comment"># 模拟溢出操作</span></span><br><span class="line">        <span class="keyword">return</span> a <span class="keyword">if</span> a &lt; <span class="number">0x80000000</span> <span class="keyword">else</span> ~(a^<span class="number">0xFFFFFFFF</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="12-字符串数组最大乘积"><a href="#12-字符串数组最大乘积" class="headerlink" title="12. 字符串数组最大乘积"></a>12. <a href="https://leetcode-cn.com/problems/maximum-product-of-word-lengths/description/" target="_blank" rel="noopener">字符串数组最大乘积</a></h3><p>给定一个字符串数组 <code>words</code>，找到 <code>len(word[i]) * len(word[j])</code> 的最大值，并且这两个单词不含有公共字母。你可以认为每个单词只包含小写字母。如果不存在这样的两个单词，返回 0。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [&quot;abcw&quot;,&quot;baz&quot;,&quot;foo&quot;,&quot;bar&quot;,&quot;xtfn&quot;,&quot;abcdef&quot;]</span><br><span class="line">输出: 16 </span><br><span class="line">解释: 这两个单词为 &quot;abcw&quot;, &quot;xtfn&quot;。</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>单词仅包含小写字母，可以使用 26 个字母的位掩码对单词的每个字母处理，判断是否存在某个字母。如果单词中存在字母 a，则将位掩码的第一位设为 1，否则设为 0。如果单词中存在字母 b，则将位掩码的第二位设为 1，否则设为 0。依次类推，一直判断到字母 z。</li>
-<li>遍历单词的每个字母，计算该字母在掩码中的位置 <code>n = ord(ch) - ord(&#39;a&#39;)</code>，然后创建一个第 n 位为 1 的掩码 <code>nth_bit = 1 &lt;&lt; n</code>，通过或操作将该码合并到位掩码中 <code>bitmask |= nth_bit</code>。</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxProduct</span><span class="params">(self, words: List[str])</span> -&gt; int:</span></span><br><span class="line">        n = len(words)</span><br><span class="line">        masks = [<span class="number">0</span>] * n  <span class="comment"># 记录每个单词的掩码</span></span><br><span class="line">        lens = [<span class="number">0</span>] * n  <span class="comment"># 记录每个单词的长度</span></span><br><span class="line">        bit_number = <span class="keyword">lambda</span> ch : ord(ch) - ord(<span class="string">'a'</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            bitmask = <span class="number">0</span></span><br><span class="line">            <span class="keyword">for</span> ch <span class="keyword">in</span> words[i]:</span><br><span class="line">                <span class="comment"># add bit number bit_number in bitmask</span></span><br><span class="line">                bitmask |= <span class="number">1</span> &lt;&lt; bit_number(ch)  <span class="comment"># 得到每个单词的掩码</span></span><br><span class="line">            masks[i] = bitmask</span><br><span class="line">            lens[i] = len(words[i])</span><br><span class="line">            </span><br><span class="line">        max_val = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, n):</span><br><span class="line">                <span class="keyword">if</span> masks[i] &amp; masks[j] == <span class="number">0</span>:  <span class="comment"># 与运算为 0，说明两个字符串没有重复字母</span></span><br><span class="line">                    max_val = max(max_val, lens[i] * lens[j])</span><br><span class="line">        <span class="keyword">return</span> max_val</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="13-统计从-0-n-每个数的二进制表示中-1-的个数"><a href="#13-统计从-0-n-每个数的二进制表示中-1-的个数" class="headerlink" title="13. 统计从 0~n 每个数的二进制表示中 1 的个数"></a>13. <a href="https://leetcode-cn.com/problems/counting-bits/description/" target="_blank" rel="noopener">统计从 0~n 每个数的二进制表示中 1 的个数</a></h3><p>给定一个非负整数 num。对于 <code>0 ≤ i ≤ num</code> 范围中的每个数字 i ，计算其二进制数中的 1 的数目并将它们作为数组返回。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: 5</span><br><span class="line">输出: [0,1,1,2,1,2]</span><br><span class="line">       0,1,2,3,4,5</span><br></pre></td></tr></table></figure>
-
-<p>对于数字 <code>6 (110)</code>，它可以看成是 <code>4 (100)</code> 再加一个 <code>2 (10)</code>，因此 <code>dp[i] = dp[i &amp; (i-1)] + 1</code>; 即数字 <code>i &amp; (i-1)</code> 相对于数字 i 来说，只是缺少了最后的一个 1，加上 1 即为 i 中 1 的个数。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countBits</span><span class="params">(self, num: int)</span> -&gt; List[int]:</span></span><br><span class="line">        res = [<span class="number">0</span>] * (num + <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, num + <span class="number">1</span>):</span><br><span class="line">            res[i] = res[i &amp; (i - <span class="number">1</span>)] + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
       
 
       
@@ -437,7 +375,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/01/%E4%BD%8D%E8%BF%90%E7%AE%97/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/03/%E5%8F%8C%E6%8C%87%E9%92%88/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -451,18 +389,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/03/%E5%8F%8C%E6%8C%87%E9%92%88/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          位运算
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/07/01/%E9%93%BE%E8%A1%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">链表</div>
+    <a href="/2020/07/01/%E4%BD%8D%E8%BF%90%E7%AE%97/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">位运算</div>
       <i class="icon-circle-right"></i>
     </a>
   
