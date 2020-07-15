@@ -186,82 +186,119 @@
       
         <p>列表基本操作</p>
  <a id="more"></a> 
+
 <h3 id="1-创建列表：-、list"><a href="#1-创建列表：-、list" class="headerlink" title="1. 创建列表：[ ]、list()"></a>1. 创建列表：[ ]、list()</h3><ol>
-<li><code>[]</code></li>
+<li><code> []</code></li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = []</span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
-<ol>
+
+<ol start="2">
 <li><code>list()</code>：传入可迭代对象</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = list()  </span><br><span class="line">a = list(range(<span class="number">2</span>))  <span class="comment"># [0, 1]</span></span><br><span class="line">a = list((<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>))  <span class="comment"># [1, 2, 3]</span></span><br><span class="line">a = list(<span class="string">"abc"</span>)  <span class="comment"># ['a', 'b', 'c']</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>判断是否为可迭代对象</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections.abc <span class="keyword">import</span> Iterable</span><br><span class="line">isinstance(<span class="number">123</span>, Iterable)  <span class="comment"># True</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="2-增加元素：append、insert、extend、"><a href="#2-增加元素：append、insert、extend、" class="headerlink" title="2. 增加元素：append、insert、extend、+"></a>2. 增加元素：append、insert、extend、+</h3><ol>
 <li><code>append()</code>：在列表末尾添加一个元素</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = []</span><br><span class="line">a.append(<span class="number">1</span>)</span><br><span class="line">a.append(<span class="string">'a'</span>)</span><br><span class="line">a  <span class="comment"># [1, 'a']</span></span><br></pre></td></tr></table></figure>
-<ol>
+
+<ol start="2">
 <li><code>insert()</code>：在列表某一位置插入一个元素</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a.insert(<span class="number">0</span>, <span class="string">'hi'</span>)</span><br><span class="line">a  <span class="comment"># ['hi', 1, 'a']</span></span><br><span class="line">a.insert(<span class="number">10</span>, <span class="number">0</span>)  <span class="comment"># 插入索引大于列表中最大的索引，直接插入到末尾</span></span><br><span class="line">a  <span class="comment"># ['hi', 1, 'a', 0]</span></span><br></pre></td></tr></table></figure>
-<ol>
+
+<ol start="3">
 <li><code>extend()</code>：连接两个列表，和 <code>+</code> 作用一样</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b = [<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>]</span><br><span class="line">a.entend(b)  <span class="comment"># ['hi', 1, 'a', 0, 5, 6, 7]</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="3-删除元素：del、pop、remove"><a href="#3-删除元素：del、pop、remove" class="headerlink" title="3. 删除元素：del、pop、remove"></a>3. 删除元素：del、pop、remove</h3><ol>
 <li><code>del()</code>：删除传入下标的元素，不返回删除值</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">del</span> a[<span class="number">2</span>]</span><br><span class="line">a  <span class="comment"># ['hi', 1, 0, 5, 6, 7]</span></span><br></pre></td></tr></table></figure>
-<ol>
+
+<ol start="2">
 <li><code>pop()</code>：默认删除最后一个元素，返回删除值</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">out = a.pop()  <span class="comment"># 可以接收返回值</span></span><br><span class="line">a  <span class="comment"># ['hi', 1, 0, 5, 6]</span></span><br><span class="line">out  <span class="comment"># 7</span></span><br><span class="line">a.pop(<span class="number">1</span>)</span><br><span class="line">a  <span class="comment"># ['hi', 0, 5, 6]</span></span><br></pre></td></tr></table></figure>
-<ol>
+
+<ol start="3">
 <li><code>remove()</code>：传入要删除的元素，只会删除找到的第一个元素</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a.remove(<span class="string">'hi'</span>)</span><br><span class="line">a  <span class="comment"># [0, 5, 6]</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="4-修改列表元素"><a href="#4-修改列表元素" class="headerlink" title="4. 修改列表元素"></a>4. 修改列表元素</h3><p>列表中存放的是指向相应元素的地址，当修改列表元素时，只是将此元素指向新的元素地址。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">0</span>] = <span class="number">2</span></span><br><span class="line">a  <span class="comment"># [2, 5, 6]</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="5-查询元素：-、index"><a href="#5-查询元素：-、index" class="headerlink" title="5. 查询元素：[ ]、index"></a>5. 查询元素：[ ]、index</h3><ol>
 <li>利用下标访问元素</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">0</span>]  <span class="comment"># 2</span></span><br><span class="line">a[<span class="number">-1</span>]  <span class="comment"># 6</span></span><br></pre></td></tr></table></figure>
-<ol>
+
+<ol start="2">
 <li><code>index()</code> ：查询指定元素的下标</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.index(<span class="number">2</span>)  <span class="comment"># 0</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="6-列表操作：loop、-、-、比较、sort、reverse、max、min、sum"><a href="#6-列表操作：loop、-、-、比较、sort、reverse、max、min、sum" class="headerlink" title="6. 列表操作：loop、+、*、比较、sort、reverse、max、min、sum"></a>6. 列表操作：loop、+、*、比较、sort、reverse、max、min、sum</h3><ol>
 <li>循环打印</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> a:</span><br><span class="line">    print(n)</span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 5</span></span><br><span class="line"><span class="comment"># 6</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> index, n <span class="keyword">in</span> enumerate(a):</span><br><span class="line">    print(<span class="string">f'no <span class="subst">&#123;index + <span class="number">1</span>&#125;</span> is <span class="subst">&#123;n&#125;</span>'</span>)</span><br><span class="line"><span class="comment"># no 1 is 2</span></span><br><span class="line"><span class="comment"># no 2 is 5</span></span><br><span class="line"><span class="comment"># no 3 is 6</span></span><br></pre></td></tr></table></figure>
-<ol>
+
+<ol start="2">
 <li>基本运算</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">b = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">c = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">b + c  <span class="comment"># [1, 2, 3, 4, 5, 6]</span></span><br><span class="line">b * <span class="number">2</span>  <span class="comment"># [1, 2, 3, 1, 2, 3]</span></span><br><span class="line">b == c  <span class="comment"># False，判断每个元素是否相等</span></span><br></pre></td></tr></table></figure>
-<ol>
+
+<ol start="3">
 <li>排序</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">d = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">9</span>, <span class="number">6</span>]</span><br><span class="line">d.reverse()  <span class="comment"># 反转列表，返回值为 None</span></span><br><span class="line">d  <span class="comment"># [6, 9, 1, 3, 2]</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">d = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">9</span>, <span class="number">6</span>]</span><br><span class="line">d.sort()  <span class="comment"># 在原列表上对列表从小到大排序，返回值为 None</span></span><br><span class="line">d  <span class="comment"># [1, 2, 3, 6, 9]</span></span><br><span class="line"></span><br><span class="line">d.sort(reverse=<span class="literal">True</span>)  <span class="comment"># 在原列表上对列表从大到小排序，返回值为 None</span></span><br><span class="line">d  <span class="comment"># [9, 6, 3, 2, 1]</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 不改变原列表，返回原列表的排序</span></span><br><span class="line">sorted(d)  <span class="comment"># [1, 2, 3, 6, 9]</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">scores = [(<span class="string">"zhangsan"</span>, <span class="number">88</span>), (<span class="string">"lisi"</span>, <span class="number">98</span>), (<span class="string">"wangwu"</span>, <span class="number">86</span>)]</span><br><span class="line">scores.sort()</span><br><span class="line">scores  <span class="comment"># [('lisi', 98), ('wangwu', 86), ('zhangsan', 88)]</span></span><br><span class="line">scores.sort(key=<span class="keyword">lambda</span> n: n[<span class="number">1</span>])  <span class="comment"># 指定排序规则，n 为列表的迭代元素</span></span><br><span class="line">scores  <span class="comment"># [('wangwu', 86), ('zhangsan', 88), ('lisi', 98)]</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">d = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">9</span>, <span class="number">6</span>]</span><br><span class="line">max(d)  <span class="comment"># 9</span></span><br><span class="line">min(d)  <span class="comment"># 1</span></span><br><span class="line">sum(d)  <span class="comment"># 21</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="7-推导式：map"><a href="#7-推导式：map" class="headerlink" title="7. 推导式：map"></a>7. 推导式：<code>map</code></h3><ol>
 <li>复制</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">9</span>, <span class="number">6</span>]</span><br><span class="line">e = d[:]  <span class="comment"># e 和 d 所指向的地址不同，两个不同的列表</span></span><br></pre></td></tr></table></figure>
-<ol>
+
+<ol start="2">
 <li>推导式</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f = [n * n <span class="keyword">for</span> n <span class="keyword">in</span> d]</span><br><span class="line">f  <span class="comment"># [4, 9, 1, 81, 36]</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">g = [n * n <span class="keyword">for</span> n <span class="keyword">in</span> d <span class="keyword">if</span> n % <span class="number">3</span> == <span class="number">0</span>]</span><br><span class="line">g  <span class="comment"># [9, 81, 36]</span></span><br></pre></td></tr></table></figure>
-<ol>
+
+<ol start="3">
 <li>map</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">h = map(<span class="keyword">lambda</span> n: n * n, d)</span><br><span class="line">list(h)  <span class="comment"># [4, 9, 1, 81, 36]</span></span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -732,6 +769,6 @@ MathJax.Hub.Queue(function() {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
