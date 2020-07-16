@@ -60,7 +60,7 @@
 			</ul>
 		</nav>
 		<nav>
-    			总文章数 11
+    			总文章数 12
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -154,6 +154,104 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-8.位运算" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/01/8.%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>
+    </h1>
+  
+
+        
+        
+
+<a href="/2020/07/01/8.%E4%BD%8D%E8%BF%90%E7%AE%97/" class="archive-article-date">
+  	<time datetime="2020-07-01T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="0-原理"><a href="#0-原理" class="headerlink" title="0. 原理"></a>0. 原理</h3><ul>
+<li><strong>基本原理</strong></li>
+</ul>
+<p>0s 表示一串 0，1s 表示一串 1。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x ^ 0s &#x3D; x      x &amp; 0s &#x3D; 0      x | 0s &#x3D; x</span><br><span class="line">x ^ 1s &#x3D; ~x     x &amp; 1s &#x3D; x      x | 1s &#x3D; 1s</span><br><span class="line">x ^ x &#x3D; 0       x &amp; x &#x3D; x       x | x &#x3D; x</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>利用 x ^ 1s = ~x 的特点，可以将一个数的位级表示<strong>翻转</strong>；</li>
+<li>利用 x ^ x = 0 的特点，可以<strong>将三个数中重复的两个数去除</strong>，只留下另一个数。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 ^ 1 ^ 2 &#x3D; 2</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>掩码操作</strong></li>
+</ul>
+<p>利用 x &amp; 0s = 0 和 x &amp; 1s = x 的特点，可以实现<strong>掩码操作</strong>。</p>
+<p>一个数 num 与 mask：00111100 进行位与操作，只保留 num 中与 mask 的 1 部分相对应的位。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">01011011 &amp;</span><br><span class="line">00111100</span><br><span class="line">--------</span><br><span class="line">00011000</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/07/01/8.%E4%BD%8D%E8%BF%90%E7%AE%97/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/01/8.%E4%BD%8D%E8%BF%90%E7%AE%97/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
   
     <article id="post-1.链表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -379,6 +477,22 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">算法思想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
