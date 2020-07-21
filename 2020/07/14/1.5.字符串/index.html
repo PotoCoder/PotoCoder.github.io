@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/7 | Poto Coder 的博客</title>
+  <title>字符串 | Poto Coder 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Poto Coder 的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/07/page/2/index.html">
+  <meta name="description" content="1. 字符串循环移位包含12s1 &#x3D; AABCD, s2 &#x3D; CDAAReturn : true  给定两个字符串 s1 和 s2，要求判定 s2 是否能够被 s1 做循环移位得到的字符串包含。 s1 进行循环移位的结果是 s1s1 的子字符串，因此只要判断 s2 是否是 s1s1 的子字符串即可。 1234def isContainsByConcal(a, b):    if">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符串">
+<meta property="og:url" content="http://yoursite.com/2020/07/14/1.5.%E5%AD%97%E7%AC%A6%E4%B8%B2/index.html">
 <meta property="og:site_name" content="Poto Coder 的博客">
+<meta property="og:description" content="1. 字符串循环移位包含12s1 &#x3D; AABCD, s2 &#x3D; CDAAReturn : true  给定两个字符串 s1 和 s2，要求判定 s2 是否能够被 s1 做循环移位得到的字符串包含。 s1 进行循环移位的结果是 s1s1 的子字符串，因此只要判断 s2 是否是 s1s1 的子字符串即可。 1234def isContainsByConcal(a, b):    if">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-14T02:43:59.000Z">
+<meta property="article:modified_time" content="2020-07-16T03:38:04.330Z">
 <meta property="article:author" content="Poto Coder">
+<meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Poto Coder 的博客" type="application/atom+xml">
@@ -153,38 +158,143 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-1.5.字符串" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      字符串
+    </h1>
+  
+
+        
+        
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+
+<a href="/2020/07/14/1.5.%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="archive-article-date">
+  	<time datetime="2020-07-14T02:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-字符串循环移位包含"><a href="#1-字符串循环移位包含" class="headerlink" title="1. 字符串循环移位包含"></a>1. 字符串循环移位包含</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s1 &#x3D; AABCD, s2 &#x3D; CDAA</span><br><span class="line">Return : true</span><br></pre></td></tr></table></figure>
+
+<p>给定两个字符串 s1 和 s2，要求判定 s2 是否能够被 s1 做循环移位得到的字符串包含。</p>
+<p>s1 进行循环移位的结果是 s1s1 的子字符串，因此只要判断 s2 是否是 s1s1 的子字符串即可。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isContainsByConcal</span><span class="params">(a, b)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> a <span class="keyword">or</span> <span class="keyword">not</span> b: <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    new_a = a + a</span><br><span class="line">    <span class="keyword">return</span> b <span class="keyword">in</span> new_a</span><br></pre></td></tr></table></figure>
+
+ <a id="more"></a> 
+
+<h3 id="2-字符串循环移位"><a href="#2-字符串循环移位" class="headerlink" title="2. 字符串循环移位"></a>2. 字符串循环移位</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s &#x3D; &quot;abcd123&quot; k &#x3D; 3</span><br><span class="line">Return &quot;123abcd&quot;</span><br></pre></td></tr></table></figure>
+
+<p>将字符串向右循环移动 k 位。</p>
+<p>将 abcd123 中的 abcd 和 123 单独翻转，得到 dcba321，然后对整个字符串进行翻转，得到 123abcd。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">leftloop</span><span class="params">(lst, k)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> lst[k:] + lst[:k]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">leftloop</span><span class="params">(lst, k)</span>:</span></span><br><span class="line">    new = lst[:k][::<span class="number">-1</span>] + lst[k:][::<span class="number">-1</span>]</span><br><span class="line">    <span class="keyword">return</span> new[::<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-字符串中单词的翻转"><a href="#3-字符串中单词的翻转" class="headerlink" title="3. 字符串中单词的翻转"></a>3. 字符串中单词的翻转</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s &#x3D; &quot;I am a student&quot;</span><br><span class="line">Return &quot;student a am I&quot;</span><br></pre></td></tr></table></figure>
+
+<p>将每个单词翻转，然后将整个字符串翻转。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">revereseWords</span><span class="params">(s)</span>:</span></span><br><span class="line">    ls = s.split(<span class="string">" "</span>)</span><br><span class="line">    new_str = ls.reverse()</span><br><span class="line">    <span class="keyword">return</span> <span class="string">" "</span>.join(new_str)</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-两个字符串包含的字符是否完全相同"><a href="#4-两个字符串包含的字符是否完全相同" class="headerlink" title="4. 两个字符串包含的字符是否完全相同"></a>4. 两个字符串包含的字符是否完全相同</h3><p>给定两个字符串 <em>s</em> 和 <em>t</em> ，编写一个函数来判断 <em>t</em> 是否是 <em>s</em> 的字母异位词。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s &#x3D; &quot;anagram&quot;, t &#x3D; &quot;nagaram&quot;, return true.</span><br><span class="line">s &#x3D; &quot;rat&quot;, t &#x3D; &quot;car&quot;, return false.</span><br></pre></td></tr></table></figure>
+
+<p>可以用 HashMap 来映射字符与出现次数，然后比较两个字符串出现的字符数量是否相同。</p>
+<p>由于本题的字符串只包含 26 个小写字符，因此可以使用长度为 26 的整型数组对字符串出现的字符进行统计，不再使用 HashMap。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isAnagram</span><span class="params">(self, s: str, t: str)</span> -&gt; bool:</span></span><br><span class="line">        cnts = [<span class="number">0</span>] * <span class="number">26</span></span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> s:</span><br><span class="line">            cnts[ord(c) - ord(<span class="string">'a'</span>)] += <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> t:</span><br><span class="line">            cnts[ord(c) - ord(<span class="string">'a'</span>)] -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> cnt <span class="keyword">in</span> cnts:</span><br><span class="line">            <span class="keyword">if</span> cnt != <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-计算一组字符集合可以组成的回文字符串的最大长度"><a href="#5-计算一组字符集合可以组成的回文字符串的最大长度" class="headerlink" title="5. 计算一组字符集合可以组成的回文字符串的最大长度"></a>5. <a href="https://leetcode-cn.com/problems/longest-palindrome/submissions/" target="_blank" rel="noopener">计算一组字符集合可以组成的回文字符串的最大长度</a></h3><p>给定一个包含大写字母和小写字母的字符串，找到通过这些字母构造成的最长的回文串。</p>
+<p>在构造过程中，请注意区分大小写。比如 <code>&quot;Aa&quot;</code> 不能当做一个回文字符串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input : &quot;abccccdd&quot;</span><br><span class="line">Output : 7</span><br><span class="line">我们可以构造的最长的回文串是&quot;dccaccd&quot;, 它的长度是 7。</span><br></pre></td></tr></table></figure>
+
+<p>使用长度为 256 的整型数组来统计每个字符出现的个数，每个字符有偶数个可以用来构成回文字符串。</p>
+<p>因为回文字符串最中间的那个字符可以单独出现，所以如果有单独的字符就把它放到最中间。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestPalindrome</span><span class="params">(self, s: str)</span> -&gt; int:</span></span><br><span class="line">        cnts = [<span class="number">0</span>] * <span class="number">256</span></span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> s:</span><br><span class="line">            cnts[ord(c)] += <span class="number">1</span></span><br><span class="line">        palindrome = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> cnt <span class="keyword">in</span> cnts:</span><br><span class="line">            palindrome += cnt // <span class="number">2</span> * <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> palindrome &lt; len(s):</span><br><span class="line">            palindrome += <span class="number">1</span>  <span class="comment"># 这个条件下 s 中一定有单个未使用的字符存在，可以把这个字符放到回文的最中间</span></span><br><span class="line">        <span class="keyword">return</span> palindrome</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-字符串同构"><a href="#6-字符串同构" class="headerlink" title="6. 字符串同构"></a>6. <a href="https://leetcode-cn.com/problems/isomorphic-strings" target="_blank" rel="noopener">字符串同构</a></h3><p>给定两个字符串 s 和 t，判断它们是否是同构的。</p>
+<p>如果 s 中的字符可以被替换得到 t ，那么这两个字符串是同构的。</p>
+<p>所有出现的字符都必须用另一个字符替换，同时保留字符的顺序。两个字符不能映射到同一个字符上，但字符可以映射自己本身。 假设 <strong><em>s</em></strong> 和 <strong><em>t</em></strong> 具有相同的长度。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Given &quot;egg&quot;, &quot;add&quot;, return true.</span><br><span class="line">Given &quot;foo&quot;, &quot;bar&quot;, return false.</span><br><span class="line">Given &quot;paper&quot;, &quot;title&quot;, return true.</span><br></pre></td></tr></table></figure>
+
+<p><strong>记录一个字符上次出现的位置，如果两个字符串中的字符上次出现的位置一样</strong>，那么就属于同构。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isIsomorphic</span><span class="params">(self, s: str, t: str)</span> -&gt; bool:</span></span><br><span class="line">        preIndexOfS = [<span class="number">0</span>] * <span class="number">256</span></span><br><span class="line">        preIndexOfT = [<span class="number">0</span>] * <span class="number">256</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(s)):</span><br><span class="line">            <span class="keyword">if</span> preIndexOfS[ord(s[i])] != preIndexOfT[ord(t[i])]:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            preIndexOfS[ord(s[i])] = i + <span class="number">1</span>  <span class="comment"># 记录位置信息</span></span><br><span class="line">            preIndexOfT[ord(t[i])] = i + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
+<p>将 s 与 t 中的元素利用哈希表 (字典) 一一对应，后面重复的字符与哈希表中字符对应规则一致则说明同构。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isIsomorphic</span><span class="params">(self, s, t)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> s:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        dic = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(s)):</span><br><span class="line">            <span class="keyword">if</span> s[i] <span class="keyword">not</span> <span class="keyword">in</span> dic:</span><br><span class="line">                <span class="keyword">if</span> t[i] <span class="keyword">in</span> dic.values():</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    dic[s[i]] = t[i]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">if</span> dic[s[i]] != t[i]:</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="7-回文子字符串个数"><a href="#7-回文子字符串个数" class="headerlink" title="7. 回文子字符串个数"></a>7. <a href="https://leetcode-cn.com/problems/palindromic-substrings/description/" target="_blank" rel="noopener">回文子字符串个数</a></h3><p>给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。</p>
+<p>具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被计为是不同的子串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;aaa&quot;</span><br><span class="line">输出: 6</span><br><span class="line">说明: 6个回文子串: &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;aa&quot;, &quot;aa&quot;, &quot;aaa&quot;.</span><br></pre></td></tr></table></figure>
+
+<p>在长度为 N 的字符串中，可能的回文串中心位置有 2N-1 个：一个字母，或两个字母中间。</p>
+<p><strong>从每一个回文串中心开始统计回文串数量</strong>。回文区间 [a, b] 表示 S[a], S[a+1], …, S[b] 是回文串，根据回文串定义可知 [a+1, b-1] 也是回文区间。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countSubstrings</span><span class="params">(self, S)</span>:</span></span><br><span class="line">        N = len(S)</span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> center <span class="keyword">in</span> range(<span class="number">2</span>*N - <span class="number">1</span>):</span><br><span class="line">            left = center // <span class="number">2</span>  <span class="comment"># center 为奇数时，center 为两字母之间，；left、right 分别为两字母位置的下标</span></span><br><span class="line">            right = left + center % <span class="number">2</span>  <span class="comment"># 偶数时，left、right 为中心位置的下标</span></span><br><span class="line">            <span class="keyword">while</span> left &gt;= <span class="number">0</span> <span class="keyword">and</span> right &lt; N <span class="keyword">and</span> S[left] == S[right]:</span><br><span class="line">                ans += <span class="number">1</span></span><br><span class="line">                left -= <span class="number">1</span></span><br><span class="line">                right += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+
+<p>从字符串的某一位开始，尝试着去扩展子字符串。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countSubstrings</span><span class="params">(self, s: str)</span> -&gt; int:</span></span><br><span class="line">        self.ans = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">extendSubStrings</span><span class="params">(s, start, end)</span>:</span></span><br><span class="line">            <span class="keyword">while</span> start &gt;= <span class="number">0</span> <span class="keyword">and</span> end &lt; len(s) <span class="keyword">and</span> s[start] == s[end]:</span><br><span class="line">                start -= <span class="number">1</span></span><br><span class="line">                end += <span class="number">1</span></span><br><span class="line">                self.ans += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(s)):</span><br><span class="line">            extendSubStrings(s, i, i)</span><br><span class="line">            extendSubStrings(s, i, i + <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> self.ans</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-判断一个整数是否是回文数"><a href="#8-判断一个整数是否是回文数" class="headerlink" title="8. 判断一个整数是否是回文数"></a>8. <a href="https://leetcode-cn.com/problems/palindrome-number/" target="_blank" rel="noopener">判断一个整数是否是回文数</a></h3><p>要求不能使用额外空间，也就不能将整数转换为字符串进行判断。</p>
+<p>将整数翻转：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span><span class="params">(self, x: int)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">if</span> x &lt; <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        cur = <span class="number">0</span></span><br><span class="line">        num = x</span><br><span class="line">        <span class="keyword">while</span> num != <span class="number">0</span>:</span><br><span class="line">            cur = cur * <span class="number">10</span> + num % <span class="number">10</span></span><br><span class="line">            num = num // <span class="number">10</span></span><br><span class="line">        <span class="keyword">return</span> x == cur</span><br></pre></td></tr></table></figure>
+
+<p>将整数分成左右两部分，右边那部分需要转置，然后判断这两部分是否相等。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span><span class="params">(self, x: int)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">if</span> x == <span class="number">0</span>: <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">if</span> x &lt; <span class="number">0</span> <span class="keyword">or</span> x % <span class="number">10</span> == <span class="number">0</span>: <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        right = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> x &gt; right:</span><br><span class="line">            right = right * <span class="number">10</span> + x % <span class="number">10</span></span><br><span class="line">            x = x // <span class="number">10</span></span><br><span class="line">        <span class="keyword">return</span> x == right <span class="keyword">or</span> x == right // <span class="number">10</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="9-统计二进制字符串中连续-1-和连续-0-数量相同的子字符串个数"><a href="#9-统计二进制字符串中连续-1-和连续-0-数量相同的子字符串个数" class="headerlink" title="9. 统计二进制字符串中连续 1 和连续 0 数量相同的子字符串个数"></a>9. <a href="https://leetcode-cn.com/problems/count-binary-substrings/" target="_blank" rel="noopener">统计二进制字符串中连续 1 和连续 0 数量相同的子字符串个数</a></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="string">"00110011"</span></span><br><span class="line">输出: <span class="number">6</span></span><br><span class="line">解释: 有<span class="number">6</span>个子串具有相同数量的连续<span class="number">1</span>和<span class="number">0</span>：“<span class="number">0011</span>”，“<span class="number">01</span>”，“<span class="number">1100</span>”，“<span class="number">10</span>”，“<span class="number">0011</span>” 和 “<span class="number">01</span>”。</span><br></pre></td></tr></table></figure>
+<ul>
+<li>按字符分组：</li>
+</ul>
+<ol>
+<li>将字符串 s 转换为 groups 数组表示字符串中相同字符连续块的长度。例如，如果 s=“11000111000000”，则 groups=[2，3，3，6]</li>
+<li>计算 groups[i] 和 groups[i+1] 之间的有效二进制字符串数。如果我们有 groups[i] = 2, groups[i+1] = 3，那么它表示 “00111” 或 “11000”。显然，我们可以在此字符串中生成 min(groups[i], groups[i+1]) 有效的二进制字符串。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countBinarySubstrings</span><span class="params">(self, s)</span>:</span></span><br><span class="line">        groups = [<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(s)):</span><br><span class="line">            <span class="keyword">if</span> s[i<span class="number">-1</span>] != s[i]:</span><br><span class="line">                groups.append(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                groups[<span class="number">-1</span>] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(groups)):</span><br><span class="line">            ans += min(groups[i<span class="number">-1</span>], groups[i])</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>线性扫描：</li>
+</ul>
+<p>修改我们的方法 1 来实时计算答案。我们将**只记住 prev = groups[-2] 和 cur=groups[-1] **来代替 groups。然后，答案是我们看到的每个不同的 (prev, cur) 的 min(prev, cur) 之和。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countBinarySubstrings</span><span class="params">(self, s)</span>:</span></span><br><span class="line">        ans, prev, cur = <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(s)):</span><br><span class="line">            <span class="keyword">if</span> s[i<span class="number">-1</span>] != s[i]:</span><br><span class="line">                ans += min(prev, cur)</span><br><span class="line">                prev, cur = cur, <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                cur += <span class="number">1</span>  <span class="comment"># 记录当前重复的字符</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans + min(prev, cur)</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/07/09/1.2.%E6%A0%91/" class="archive-article-date">
-  	<time datetime="2020-07-09T10:23:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/09/1.2.%E6%A0%91/">树</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -196,223 +306,147 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/14/1.5.%E5%AD%97%E7%AC%A6%E4%B8%B2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
 
-<a href="/2020/07/06/%E7%89%B9%E5%BE%81%E5%BD%92%E4%B8%80%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2020-07-06T07:05:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-06</time>
-</a>
+  
+<nav id="article-nav">
+  
+    <a href="/2020/07/15/1.6.%E6%95%B0%E7%BB%84%E4%B8%8E%E7%9F%A9%E9%98%B5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          数组与矩阵
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/12/1.4.%E5%93%88%E5%B8%8C%E8%A1%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">哈希表</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/06/%E7%89%B9%E5%BE%81%E5%BD%92%E4%B8%80%E5%8C%96/">特征归一化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-字符串循环移位包含"><span class="toc-number">1.</span> <span class="toc-text">1. 字符串循环移位包含</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-字符串循环移位"><span class="toc-number">2.</span> <span class="toc-text">2. 字符串循环移位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-字符串中单词的翻转"><span class="toc-number">3.</span> <span class="toc-text">3. 字符串中单词的翻转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-两个字符串包含的字符是否完全相同"><span class="toc-number">4.</span> <span class="toc-text">4. 两个字符串包含的字符是否完全相同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-计算一组字符集合可以组成的回文字符串的最大长度"><span class="toc-number">5.</span> <span class="toc-text">5. 计算一组字符集合可以组成的回文字符串的最大长度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-字符串同构"><span class="toc-number">6.</span> <span class="toc-text">6. 字符串同构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-回文子字符串个数"><span class="toc-number">7.</span> <span class="toc-text">7. 回文子字符串个数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-判断一个整数是否是回文数"><span class="toc-number">8.</span> <span class="toc-text">8. 判断一个整数是否是回文数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-统计二进制字符串中连续-1-和连续-0-数量相同的子字符串个数"><span class="toc-number">9.</span> <span class="toc-text">9. 统计二进制字符串中连续 1 和连续 0 数量相同的子字符串个数</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+        
+    </div>
+</aside>
 
-<a href="/2020/07/03/4.1%E5%88%97%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2020-07-03T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/03/4.1%E5%88%97%E8%A1%A8/">列表</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/07/03/2.1.%E5%8F%8C%E6%8C%87%E9%92%88/" class="archive-article-date">
-  	<time datetime="2020-07-03T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/03/2.1.%E5%8F%8C%E6%8C%87%E9%92%88/">双指针</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/07/01/1.8.%E4%BD%8D%E8%BF%90%E7%AE%97/" class="archive-article-date">
-  	<time datetime="2020-07-01T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/01/1.8.%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/07/01/1.1.%E9%93%BE%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2020-07-01T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/01/1.1.%E9%93%BE%E8%A1%A8/">链表</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2020/07/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2020/07/">1</a><span class="page-number current">2</span>
-    </nav>
   
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2020/07/14/1.5.%E5%AD%97%E7%AC%A6%E4%B8%B2/",
+  owner: 'PotoCoder',
+  repo: 'PotoCoder.github.io',
+  oauth: {
+    client_id: 'cafd65475916610b1b6e',
+    client_secret: '5d7ab86e68286875545be408547c67fb2d0a2395',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
+
+
+
 
 
           </div>
@@ -452,8 +486,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

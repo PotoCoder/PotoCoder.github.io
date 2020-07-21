@@ -6,24 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>双指针 | Poto Coder 的博客</title>
+  <title>分治思想 | Poto Coder 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="双指针主要用于遍历数组，两个指针指向不同的元素，从而协同完成任务。  1.1 有序数组中的两数之和给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。 12返回的下标值（index1 和 index2）不是从零开始的。你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相">
+  <meta name="description" content="1. 给表达式加括号给定一个含有数字和运算符的字符串，为表达式添加括号，改变其运算优先级以求出不同的结果。你需要给出所有可能的组合的结果。有效的运算符号包含 +, - 以及 * 。 12345678输入: &quot;2*3-4*5&quot;输出: [-34, -14, -10, -10, 10]解释: (2*(3-(4*5))) &#x3D; -34 ((2*3)-(4*5)) &#x3D;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="双指针">
-<meta property="og:url" content="http://yoursite.com/2020/07/03/1.%E5%8F%8C%E6%8C%87%E9%92%88/index.html">
+<meta property="og:title" content="分治思想">
+<meta property="og:url" content="http://yoursite.com/2020/07/16/2.5.%E5%88%86%E6%B2%BB/index.html">
 <meta property="og:site_name" content="Poto Coder 的博客">
-<meta property="og:description" content="双指针主要用于遍历数组，两个指针指向不同的元素，从而协同完成任务。  1.1 有序数组中的两数之和给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。 12返回的下标值（index1 和 index2）不是从零开始的。你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相">
+<meta property="og:description" content="1. 给表达式加括号给定一个含有数字和运算符的字符串，为表达式添加括号，改变其运算优先级以求出不同的结果。你需要给出所有可能的组合的结果。有效的运算符号包含 +, - 以及 * 。 12345678输入: &quot;2*3-4*5&quot;输出: [-34, -14, -10, -10, 10]解释: (2*(3-(4*5))) &#x3D; -34 ((2*3)-(4*5)) &#x3D;">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/4/1731a28ec7a081e7?w=531&h=171&f=png&s=11301">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/4/1731a2d3e43476bc?w=2732&amp;h=1250&amp;f=png&amp;s=63919">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/4/1731a2ee17f2df88?w=2732&amp;h=1282&amp;f=png&amp;s=66025">
-<meta property="article:published_time" content="2020-07-03T03:43:59.000Z">
-<meta property="article:modified_time" content="2020-07-16T03:39:44.437Z">
+<meta property="article:published_time" content="2020-07-16T03:43:59.000Z">
+<meta property="article:modified_time" content="2020-07-16T03:45:38.567Z">
 <meta property="article:author" content="Poto Coder">
-<meta property="article:tag" content="算法思想">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2020/7/4/1731a28ec7a081e7?w=531&h=171&f=png&s=11301">
   
     <link rel="alternative" href="/atom.xml" title="Poto Coder 的博客" type="application/atom+xml">
   
@@ -69,7 +64,7 @@
 			</ul>
 		</nav>
 		<nav>
-    			总文章数 13
+    			总文章数 16
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -162,14 +157,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-1.双指针" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2.5.分治" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      双指针
+      分治思想
     </h1>
   
 
@@ -181,128 +176,35 @@
         </span>
 
 
-<a href="/2020/07/03/1.%E5%8F%8C%E6%8C%87%E9%92%88/" class="archive-article-date">
-  	<time datetime="2020-07-03T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-03</time>
+<a href="/2020/07/16/2.5.%E5%88%86%E6%B2%BB/" class="archive-article-date">
+  	<time datetime="2020-07-16T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>双指针主要用于遍历数组，两个指针指向不同的元素，从而协同完成任务。 </p>
-<h3 id="1-1-有序数组中的两数之和"><a href="#1-1-有序数组中的两数之和" class="headerlink" title="1.1 有序数组中的两数之和"></a>1.1 <a href="https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/" target="_blank" rel="noopener">有序数组中的两数之和</a></h3><p>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。<br>函数应该返回这两个下标值 <code>index1</code> 和 <code>index2</code>，其中 <code>index1</code> 必须小于 <code>index2</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">返回的下标值（index1 和 index2）不是从零开始的。</span><br><span class="line">你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。</span><br></pre></td></tr></table></figure>
+        <h3 id="1-给表达式加括号"><a href="#1-给表达式加括号" class="headerlink" title="1. 给表达式加括号"></a>1. <a href="https://leetcode-cn.com/problems/different-ways-to-add-parentheses/description/" target="_blank" rel="noopener">给表达式加括号</a></h3><p>给定一个含有数字和运算符的字符串，为表达式添加括号，改变其运算优先级以求出不同的结果。你需要给出所有可能的组合的结果。有效的运算符号包含 +, - 以及 * 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;2*3-4*5&quot;</span><br><span class="line">输出: [-34, -14, -10, -10, 10]</span><br><span class="line">解释: </span><br><span class="line">(2*(3-(4*5))) &#x3D; -34 </span><br><span class="line">((2*3)-(4*5)) &#x3D; -14 </span><br><span class="line">((2*(3-4))*5) &#x3D; -10 </span><br><span class="line">(2*((3-4)*5)) &#x3D; -10 </span><br><span class="line">(((2*3)-4)*5) &#x3D; 10</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: numbers &#x3D; [2, 7, 11, 15], target &#x3D; 9</span><br><span class="line">输出: [1,2]</span><br><span class="line">解释: 2 与 7 之和等于目标数 9 。因此 index1 &#x3D; 1, index2 &#x3D; 2 。</span><br></pre></td></tr></table></figure>
+ <a id="more"></a> 
 
-<p>使用双指针，一个指针指向值较小的元素，一个指针指向值较大的元素。指向较小元素的指针从头向尾遍历，指向较大元素的指针从尾向头遍历。</p>
-<ul>
-<li>如果两个指针指向元素的和 <code>sum == target</code>，那么得到要求的结果；</li>
-<li>如果 <code>sum &gt; target</code>，移动较大的元素，使 <code>sum</code> 变小一些；</li>
-<li>如果 <code>sum &lt; target</code>，移动较小的元素，使 <code>sum</code> 变大一些。</li>
-</ul>
-<p>数组中的元素最多遍历一次，时间复杂度为 <code>O(N)</code>。只使用了两个额外变量，空间复杂度为 <code>O(1)</code>。</p>
-<a id="more"></a> 
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, numbers: List[int], target: int)</span> -&gt; List[int]:</span></span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = len(numbers) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> left &lt;= right:</span><br><span class="line">            sum_ = numbers[left] + numbers[right]</span><br><span class="line">            <span class="keyword">if</span> sum_ == target:</span><br><span class="line">                <span class="keyword">return</span> [left + <span class="number">1</span>, right + <span class="number">1</span>]  <span class="comment"># 题目要求索引是从 1 开始的</span></span><br><span class="line">            <span class="keyword">elif</span> sum_ &lt; target:</span><br><span class="line">                left += <span class="number">1</span>  <span class="comment"># 让 sum_ 小一点</span></span><br><span class="line">            <span class="keyword">elif</span> sum_ &gt; target:</span><br><span class="line">                right -= <span class="number">1</span>  <span class="comment"># 让 sum_ 大一点</span></span><br><span class="line">        <span class="keyword">return</span> [<span class="number">-1</span>, <span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+<p>对于一个形如 x op y（op 为运算符，x 和 y 为数） 的算式而言，它的结果组合取决于 x 和 y 的结果组合数，而 x 和 y 又可以写成形如 x op y 的算式。</p>
+<p>因此，该问题的子问题就是 x op y 中的 x 和 y：以运算符分隔的左右两侧算式解。</p>
+<p>然后我们来进行分治算法三步走：</p>
+<ol>
+<li>分解：按运算符分成左右两部分，分别求解</li>
+<li>解决：实现一个递归函数，输入算式，返回算式解</li>
+<li>合并：根据运算符合并左右两部分的解，得出最终解</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">diffWaysToCompute</span><span class="params">(self, input: str)</span> -&gt; List[int]:</span></span><br><span class="line">        <span class="comment"># 如果只有数字，直接返回</span></span><br><span class="line">        <span class="keyword">if</span> input.isdigit():</span><br><span class="line">            <span class="keyword">return</span> [int(input)]</span><br><span class="line"></span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">for</span> i, char <span class="keyword">in</span> enumerate(input):</span><br><span class="line">            <span class="keyword">if</span> char <span class="keyword">in</span> [<span class="string">'+'</span>, <span class="string">'-'</span>, <span class="string">'*'</span>]:</span><br><span class="line">                <span class="comment"># 1.分解：遇到运算符，计算左右两侧的结果集</span></span><br><span class="line">                <span class="comment"># 2.解决：diffWaysToCompute 递归函数求出子问题的解</span></span><br><span class="line">                left = self.diffWaysToCompute(input[:i])</span><br><span class="line">                right = self.diffWaysToCompute(input[i+<span class="number">1</span>:])</span><br><span class="line">                <span class="comment"># 3.合并：根据运算符合并子问题的解</span></span><br><span class="line">                <span class="keyword">for</span> l <span class="keyword">in</span> left:</span><br><span class="line">                    <span class="keyword">for</span> r <span class="keyword">in</span> right:</span><br><span class="line">                        <span class="keyword">if</span> char == <span class="string">'+'</span>:</span><br><span class="line">                            res.append(l + r)</span><br><span class="line">                        <span class="keyword">elif</span> char == <span class="string">'-'</span>:</span><br><span class="line">                            res.append(l - r)</span><br><span class="line">                        <span class="keyword">else</span>:</span><br><span class="line">                            res.append(l * r)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="1-2-无序数组中的两数之和"><a href="#1-2-无序数组中的两数之和" class="headerlink" title="1.2 无序数组中的两数之和"></a>1.2 <a href="https://leetcode-cn.com/problems/two-sum" target="_blank" rel="noopener">无序数组中的两数之和</a></h3><p>给定一个整数数组 <code>nums</code> 和一个目标值 <code>target</code>，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">给定 nums &#x3D; [2, 7, 11, 15], target &#x3D; 9</span><br><span class="line">因为 nums[0] + nums[1] &#x3D; 2 + 7 &#x3D; 9</span><br><span class="line">所以返回 [0, 1]</span><br></pre></td></tr></table></figure>
+<h3 id="2-不同的二叉搜索树"><a href="#2-不同的二叉搜索树" class="headerlink" title="2. 不同的二叉搜索树"></a>2. 不同的二叉搜索树</h3><p>给定一个整数 <em>n</em>，生成所有由 1 … <em>n</em> 为节点所组成的 <strong>二叉搜索树</strong> 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">输入：3</span><br><span class="line">输出：</span><br><span class="line">[</span><br><span class="line">  [1,null,3,2],</span><br><span class="line">  [3,2,null,1],</span><br><span class="line">  [3,1,null,null,2],</span><br><span class="line">  [2,1,3],</span><br><span class="line">  [1,null,2,null,3]</span><br><span class="line">]</span><br><span class="line">解释：以上的输出对应以下 5 种不同结构的二叉搜索树：</span><br><span class="line">   1         3     3      2      1</span><br><span class="line">    \       &#x2F;     &#x2F;      &#x2F; \      \</span><br><span class="line">     3     2     1      1   3      2</span><br><span class="line">    &#x2F;     &#x2F;       \                 \</span><br><span class="line">   2     1         2                 3</span><br></pre></td></tr></table></figure>
 
-<p><strong>1. 暴力法：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(nums, target)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums) - <span class="number">1</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, len(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[i] + nums[j]:</span><br><span class="line">                <span class="keyword">return</span> [i, j]</span><br><span class="line">    <span class="keyword">return</span> [<span class="number">-1</span>, <span class="number">-1</span>]  <span class="comment"># 不存在这么两数</span></span><br></pre></td></tr></table></figure>
-
-<p>这个解法非常直接，时间复杂度 <code>O(N^2)</code>，空间复杂度 <code>O(1)</code>。</p>
-<p><strong>2. 哈希表：</strong></p>
-<p>通过一个哈希表减少时间复杂度：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(nums, target)</span>:</span></span><br><span class="line">    hashmap=&#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> index, num <span class="keyword">in</span> enumerate(nums):  <span class="comment"># 构造一个哈希表，元素映射到相应的索引</span></span><br><span class="line">        hashmap[num] = index</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">for</span> i, num <span class="keyword">in</span> enumerate(nums):</span><br><span class="line">        j = hashmap.get(target - num)</span><br><span class="line">        <span class="keyword">if</span> j <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">and</span> i != j:  <span class="comment"># 如果 j 存在且不是 i 本身</span></span><br><span class="line">            <span class="keyword">return</span> [i, j]</span><br></pre></td></tr></table></figure>
-
-<p>由于哈希表的查询时间为 O(1)，算法的时间复杂度降低到 <code>O(N)</code>，但是需要 <code>O(N)</code> 的空间复杂度来存储哈希表。不过综合来看，是要比暴力解法高效的。</p>
-<h3 id="2-两数平方和"><a href="#2-两数平方和" class="headerlink" title="2.  两数平方和"></a>2.  <a href="https://leetcode-cn.com/problems/sum-of-square-numbers" target="_blank" rel="noopener">两数平方和</a></h3><p>给定一个非负整数 c ，你要判断是否存在两个整数 a 和 b，使得 <code>a2 + b2 = c</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入: 5</span><br><span class="line">输出: True</span><br><span class="line">解释: 1 * 1 + 2 * 2 &#x3D; 5</span><br><span class="line"></span><br><span class="line">输入: 3</span><br><span class="line">输出: False</span><br></pre></td></tr></table></figure>
-
-<p>可以看成是在元素为 <code>0 — c</code> 的有序数组中查找两个数，使得这两个数的平方和为 c，如果能找到，则返回 <code>true</code>，表示 c 是两个整数的平方和。 </p>
-<p>事实上，右指针并不需要初始化到 c，初始化到 <code>int(sqrt(c))</code> 即可。</p>
-<p>因为最多只需要遍历一次 <code>0 — int(sqrt(c))</code>，所以时间复杂度为 <code>O(int(sqrt(c)))</code>。又因为只使用了两个额外的变量，因此空间复杂度为 <code>O(1)</code>。 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">judgeSquareSum</span><span class="params">(self, c: int)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">if</span> c &lt; <span class="number">0</span>: <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        left, right = <span class="number">0</span>, int(sqrt(c))</span><br><span class="line">        <span class="keyword">while</span> left &lt;= right:</span><br><span class="line">            sum_ = left ** <span class="number">2</span> + right ** <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> sum_ == c:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">elif</span> sum_ &lt; c:</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="3-反转字符串中的元音字符"><a href="#3-反转字符串中的元音字符" class="headerlink" title="3. 反转字符串中的元音字符"></a>3. <a href="https://leetcode-cn.com/problems/reverse-vowels-of-a-string/" target="_blank" rel="noopener">反转字符串中的元音字符</a></h3><p>编写一个函数，以字符串作为输入，反转该字符串中的元音字母。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;hello&quot;</span><br><span class="line">输出: &quot;holle&quot;</span><br><span class="line"></span><br><span class="line">输入: &quot;leetcode&quot;</span><br><span class="line">输出: &quot;leotcede&quot;</span><br></pre></td></tr></table></figure>
-
-<p><strong>使用双指针：</strong></p>
-<p>一个指针从头向尾遍历，一个指针从尾到头遍历，当两个指针都遍历到元音字符时，交换这两个元音字符。</p>
-<p>为了快速判断一个字符是不是元音字符，我们将全部元音字符添加到集合 <code>vowel</code> 中，从而以 <code>O(1)</code> 的时间复杂度进行该操作。</p>
-<ul>
-<li>时间复杂度为 <code>O(N)</code>：只需要遍历所有元素一次</li>
-<li>空间复杂度 <code>O(1)</code>：只需要使用两个额外变量</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseVowels</span><span class="params">(self, s: str)</span> -&gt; str:</span></span><br><span class="line">        vowel = &#123;<span class="string">'a'</span>, <span class="string">'e'</span>, <span class="string">'i'</span>, <span class="string">'o'</span>, <span class="string">'u'</span>, <span class="string">'A'</span>, <span class="string">'E'</span>, <span class="string">'I'</span>, <span class="string">'O'</span>, <span class="string">'U'</span>&#125;</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> s: <span class="keyword">return</span> <span class="string">""</span></span><br><span class="line">        left, right = <span class="number">0</span>, len(s) - <span class="number">1</span></span><br><span class="line">        res = [<span class="literal">None</span>] * len(s)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> left &lt;= right:</span><br><span class="line">            <span class="keyword">if</span> s[left] <span class="keyword">not</span> <span class="keyword">in</span> vowel:</span><br><span class="line">                res[left] = s[left]</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> s[right] <span class="keyword">not</span> <span class="keyword">in</span> vowel:</span><br><span class="line">                res[right] = s[right]</span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                res[left] = s[right]</span><br><span class="line">                res[right] = s[left]</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">''</span>.join(res)</span><br></pre></td></tr></table></figure>
-
-<p><strong>使用栈：</strong></p>
-<p>利用栈<strong>先进后出</strong>的特点，将字符串 s 中的元音字符存入栈中。循环遍历字符串元素，当遇到元音字符时，从栈中弹出的元素即为此元音字符所要反转的字符。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseVowels</span><span class="params">(self, s: str)</span> -&gt; str:</span></span><br><span class="line">        vowel = &#123;<span class="string">'a'</span>, <span class="string">'e'</span>, <span class="string">'i'</span>, <span class="string">'o'</span>, <span class="string">'u'</span>, <span class="string">'A'</span>, <span class="string">'E'</span>, <span class="string">'I'</span>, <span class="string">'O'</span>, <span class="string">'U'</span>&#125;</span><br><span class="line">        ls = []</span><br><span class="line">        vs = [i <span class="keyword">for</span> i <span class="keyword">in</span> s <span class="keyword">if</span> i <span class="keyword">in</span> vowel]  <span class="comment"># 将 s 中的元音字符存入栈中</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> i <span class="keyword">not</span> <span class="keyword">in</span> vowel:</span><br><span class="line">                ls.append(i)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                ls.append(vs.pop())</span><br><span class="line">        <span class="keyword">return</span> <span class="string">''</span>.join(ls)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4-回文字符串"><a href="#4-回文字符串" class="headerlink" title="4. 回文字符串"></a>4. <a href="https://leetcode-cn.com/problems/valid-palindrome-ii/" target="_blank" rel="noopener">回文字符串</a></h3><p>给定一个非空字符串 s，最多删除一个字符。判断是否能成为回文字符串。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;aba&quot;</span><br><span class="line">输出: True</span><br><span class="line"></span><br><span class="line">输入: &quot;abca&quot;</span><br><span class="line">输出: True</span><br><span class="line">解释: 你可以删除c字符。</span><br><span class="line"></span><br><span class="line">注意:字符串只包含从 a-z 的小写字母。字符串的最大长度是50000。</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>本题的关键是处理删除一个字符。在使用双指针遍历字符串时，如果出现两个指针指向的字符不相等的情况，我们就试着删除一个字符，再判断删除完之后的字符串是否是回文字符串。</li>
-<li>在判断是否为回文字符串时，我们不需要判断整个字符串，因为左指针左边和右指针右边的字符之前已经判断过具有对称性质，所以只需要判断中间的子字符串即可。</li>
-<li>在试着删除字符时，我们既可以删除左指针指向的字符，也可以删除右指针指向的字符。</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">validPalindrome</span><span class="params">(self, s: str)</span> -&gt; bool:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span><span class="params">(s, i, j)</span>:</span></span><br><span class="line">            <span class="keyword">while</span> i &lt; j:</span><br><span class="line">                <span class="keyword">if</span> s[i] != s[j]:</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">                j -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">        left, right = <span class="number">0</span>, len(s) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> left &lt; right:</span><br><span class="line">            <span class="keyword">if</span> s[left] != s[right]:</span><br><span class="line">                <span class="keyword">return</span> isPalindrome(s, left, right - <span class="number">1</span>) <span class="keyword">or</span> isPalindrome(s, left + <span class="number">1</span>, right)</span><br><span class="line">            left += <span class="number">1</span></span><br><span class="line">            right -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="5-归并两个有序数组"><a href="#5-归并两个有序数组" class="headerlink" title="5. 归并两个有序数组"></a>5. <a href="https://leetcode-cn.com/problems/merge-sorted-array/description/" target="_blank" rel="noopener">归并两个有序数组</a></h3><p>给你两个有序整数数组 nums1 和 nums2，请你将 nums2 合并到 nums1 中，使 nums1 成为一个有序数组。</p>
-<p>初始化 nums1 和 nums2 的元素数量分别为 m 和 n 。<br>你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">nums1 &#x3D; [1,2,3,0,0,0], m &#x3D; 3</span><br><span class="line">nums2 &#x3D; [2,5,6],       n &#x3D; 3</span><br><span class="line">输出: [1,2,2,3,5,6]</span><br></pre></td></tr></table></figure>
-
-<p> 需要从尾开始遍历，否则在 <code>nums1</code> 上归并得到的值会覆盖还未进行归并比较的值。 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">merge</span><span class="params">(self, nums1: List[int], m: int, nums2: List[int], n: int)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums1 in-place instead.</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        index1 = m - <span class="number">1</span></span><br><span class="line">        index2 = n - <span class="number">1</span></span><br><span class="line">        index_merge = m + n - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> index1 &gt;= <span class="number">0</span> <span class="keyword">or</span> index2 &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> index1 &lt; <span class="number">0</span>:</span><br><span class="line">                nums1[index_merge] = nums2[index2]</span><br><span class="line">                index2 -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> index2 &lt; <span class="number">0</span>:</span><br><span class="line">                nums1[index_merge] = nums1[index1]</span><br><span class="line">                index1 -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> nums1[index1] &gt; nums2[index2]:</span><br><span class="line">                nums1[index_merge] = nums1[index1]</span><br><span class="line">                index1 -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                nums1[index_merge] = nums2[index2]</span><br><span class="line">                index2 -= <span class="number">1</span></span><br><span class="line">            index_merge -= <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="6-1-判断链表是否有环"><a href="#6-1-判断链表是否有环" class="headerlink" title="6.1 判断链表是否有环"></a>6.1 <a href="https://leetcode-cn.com/problems/linked-list-cycle" target="_blank" rel="noopener">判断链表是否有环</a></h3><p>给定一个链表，判断链表中是否有环。</p>
-<p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head &#x3D; [3,2,0,-4], pos &#x3D; 1</span><br><span class="line">输出：true</span><br><span class="line">解释：链表中有一个环，其尾部连接到第二个节点。</span><br></pre></td></tr></table></figure>
-
-<p>使用<strong>快慢指针</strong>，一个跑得快，一个跑得慢。如果不含有环，跑得快的那个指针最终会遇到 <code>None</code>，说明链表不含环；如果含有环，快指针最终会超慢指针一圈，和慢指针相遇，说明链表含有环。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hasCycle</span><span class="params">(self, head: ListNode)</span> -&gt; bool:</span></span><br><span class="line">        fast = slow = head</span><br><span class="line">        <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            fast = fast.next.next</span><br><span class="line">            slow = slow.next</span><br><span class="line">            <span class="keyword">if</span> fast == slow:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="6-2-链表中环的起点"><a href="#6-2-链表中环的起点" class="headerlink" title="6.2 链表中环的起点"></a>6.2 <a href="https://leetcode-cn.com/problems/linked-list-cycle-ii" target="_blank" rel="noopener">链表中环的起点</a></h3><p>给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。</p>
-<p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。</p>
-<p>说明：不允许修改给定的链表。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head &#x3D; [3,2,0,-4], pos &#x3D; 1</span><br><span class="line">输出：tail connects to node index 1</span><br><span class="line">解释：链表中有一个环，其尾部连接到第二个节点。</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a28ec7a081e7?w=531&h=171&f=png&s=11301"></p>
-<p><strong>当快慢指针相遇时，让其中任一个指针指向头节点，然后让它俩以相同速度前进，再次相遇时所在的节点位置就是环开始的位置。</strong></p>
-<p>第一次相遇时，假设慢指针 <strong>slow 走了 k 步</strong>，那么快指针 <strong>fast 一定走了 2k 步</strong>，也就是说比 slow 多走了 k 步（也就是环的长度）。 </p>
-<img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a2d3e43476bc?w=2732&amp;h=1250&amp;f=png&amp;s=63919" style="zoom: 25%;" />
-
-<p>设相遇点距环的起点的距离为 m，那么环的起点距头结点 head 的距离为 k - m，也就是说如果从 head 前进 k - m 步就能到达环起点。</p>
-<p>巧的是，如果从相遇点继续前进 k - m 步，也恰好到达环起点。</p>
-<img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a2ee17f2df88?w=2732&amp;h=1282&amp;f=png&amp;s=66025" style="zoom: 25%;" />
-
-<p>所以，只要我们把快慢指针中的任一个重新指向 head，然后两个指针同速前进，k - m 步后就会相遇，相遇之处就是环的起点了。 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">detectCycle</span><span class="params">(self, head: ListNode)</span> -&gt; ListNode:</span></span><br><span class="line">        fast = slow = head</span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">if</span> fast == <span class="literal">None</span> <span class="keyword">or</span> fast.next == <span class="literal">None</span>:</span><br><span class="line">                <span class="keyword">return</span> </span><br><span class="line">            fast = fast.next.next</span><br><span class="line">            slow = slow.next</span><br><span class="line">            <span class="keyword">if</span> fast == slow:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            </span><br><span class="line">        slow = head</span><br><span class="line">        <span class="keyword">while</span> slow != fast:</span><br><span class="line">            fast = fast.next</span><br><span class="line">            slow = slow.next</span><br><span class="line">        <span class="keyword">return</span> slow</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="6-3-寻找链表的中点"><a href="#6-3-寻找链表的中点" class="headerlink" title="6.3 寻找链表的中点"></a>6.3 寻找链表的中点</h3><p>类似上面的思路，我们还可以让快指针一次前进两步，慢指针一次前进一步，当快指针到达链表尽头时，慢指针就处于链表的中间位置 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> fast <span class="keyword">or</span> fast.next:</span><br><span class="line">    fast = fast.next.next</span><br><span class="line">    slow = slow.next</span><br><span class="line"><span class="keyword">return</span> slow  <span class="comment"># slow 就在中间位置</span></span><br></pre></td></tr></table></figure>
-
-<p>当链表的长度是奇数时，slow 恰巧停在中点位置；如果长度是偶数，slow 最终的位置是中间偏右。</p>
-<h3 id="6-4-寻找链表的倒数第-k-个元素"><a href="#6-4-寻找链表的倒数第-k-个元素" class="headerlink" title="6.4 寻找链表的倒数第 k 个元素"></a>6.4 寻找链表的倒数第 k 个元素</h3><p>思路还是使用快慢指针，<strong>让快指针先走 k 步，然后快慢指针开始同速前进</strong>。这样<strong>当快指针走到链表末尾 null 时，慢指针所在的位置就是倒数第 k 个链表节点</strong>（为了简化，假设 k 不会超过链表长度）： </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">slow = fast = head</span><br><span class="line"><span class="keyword">while</span> k &gt; <span class="number">0</span>:</span><br><span class="line">    fast = fast.next</span><br><span class="line">    k -= <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> fast != <span class="literal">None</span>:</span><br><span class="line">    slow = slow.next</span><br><span class="line">    fast = fast.next</span><br><span class="line"><span class="keyword">return</span> slow</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">generateTrees</span><span class="params">(self, n: int)</span> -&gt; List[TreeNode]:</span></span><br><span class="line">        <span class="keyword">if</span> n &lt; <span class="number">1</span>: <span class="keyword">return</span> []</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">generateSubtrees</span><span class="params">(s, e)</span>:</span></span><br><span class="line">            res = []</span><br><span class="line">            <span class="keyword">if</span> s &gt; e:</span><br><span class="line">                res.append(<span class="literal">None</span>)</span><br><span class="line">                <span class="keyword">return</span> res</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(s, e + <span class="number">1</span>):</span><br><span class="line">                <span class="comment"># 从序列 1 ..n 中取出数字 i，作为当前树的树根。</span></span><br><span class="line">                <span class="comment"># 于是，剩余 i - 1 个元素可用于左子树，n - i 个元素用于右子树。</span></span><br><span class="line">                left_subtrees = generateSubtrees(s, i - <span class="number">1</span>)</span><br><span class="line">                right_subtrees = generateSubtrees(i + <span class="number">1</span>, e)</span><br><span class="line">                <span class="keyword">for</span> left <span class="keyword">in</span> left_subtrees:</span><br><span class="line">                    <span class="keyword">for</span> right <span class="keyword">in</span> right_subtrees:</span><br><span class="line">                        root = TreeNode(i)</span><br><span class="line">                        root.left = left</span><br><span class="line">                        root.right = right</span><br><span class="line">                        res.append(root)</span><br><span class="line">            <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> generateSubtrees(<span class="number">1</span>, n)</span><br></pre></td></tr></table></figure>
 
 
       
@@ -333,18 +235,18 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法思想</a>
+        			<a href="/categories/算法思想//" class="article-tag-list-link color5">算法思想</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
 
       
 
@@ -394,7 +296,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/03/1.%E5%8F%8C%E6%8C%87%E9%92%88/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/16/2.5.%E5%88%86%E6%B2%BB/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -408,18 +310,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/03/%E5%88%97%E8%A1%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/07/16/2.3.%E8%B4%AA%E5%BF%83%E6%80%9D%E6%83%B3/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          列表
+          贪心算法
         
       </div>
     </a>
   
   
-    <a href="/2020/07/01/8.%E4%BD%8D%E8%BF%90%E7%AE%97/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">位运算</div>
+    <a href="/2020/07/15/1.6.%E6%95%B0%E7%BB%84%E4%B8%8E%E7%9F%A9%E9%98%B5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数组与矩阵</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -446,7 +348,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-有序数组中的两数之和"><span class="toc-number">1.</span> <span class="toc-text">1.1 有序数组中的两数之和</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-无序数组中的两数之和"><span class="toc-number">2.</span> <span class="toc-text">1.2 无序数组中的两数之和</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-两数平方和"><span class="toc-number">3.</span> <span class="toc-text">2.  两数平方和</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-反转字符串中的元音字符"><span class="toc-number">4.</span> <span class="toc-text">3. 反转字符串中的元音字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-回文字符串"><span class="toc-number">5.</span> <span class="toc-text">4. 回文字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-归并两个有序数组"><span class="toc-number">6.</span> <span class="toc-text">5. 归并两个有序数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-判断链表是否有环"><span class="toc-number">7.</span> <span class="toc-text">6.1 判断链表是否有环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-链表中环的起点"><span class="toc-number">8.</span> <span class="toc-text">6.2 链表中环的起点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-寻找链表的中点"><span class="toc-number">9.</span> <span class="toc-text">6.3 寻找链表的中点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4-寻找链表的倒数第-k-个元素"><span class="toc-number">10.</span> <span class="toc-text">6.4 寻找链表的倒数第 k 个元素</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-给表达式加括号"><span class="toc-number">1.</span> <span class="toc-text">1. 给表达式加括号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-不同的二叉搜索树"><span class="toc-number">2.</span> <span class="toc-text">2. 不同的二叉搜索树</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -471,7 +373,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/2020/07/03/1.%E5%8F%8C%E6%8C%87%E9%92%88/",
+  id: "http://yoursite.com/2020/07/16/2.5.%E5%88%86%E6%B2%BB/",
   owner: 'PotoCoder',
   repo: 'PotoCoder.github.io',
   oauth: {
@@ -626,11 +528,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法与数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
             <div class="clearfix"></div>

@@ -60,7 +60,7 @@
 			</ul>
 		</nav>
 		<nav>
-    			总文章数 13
+    			总文章数 16
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -155,734 +155,43 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-3.贪心思想" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2.7.动态规划" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/16/3.%E8%B4%AA%E5%BF%83%E6%80%9D%E6%83%B3/">贪心算法</a>
+      <a class="article-title" href="/2020/07/20/2.7.%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">位运算</a>
     </h1>
   
 
         
         
 
-<a href="/2020/07/16/3.%E8%B4%AA%E5%BF%83%E6%80%9D%E6%83%B3/" class="archive-article-date">
-  	<time datetime="2020-07-16T04:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-16</time>
+<a href="/2020/07/20/2.7.%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="archive-article-date">
+  	<time datetime="2020-07-20T11:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>保证每次操作都是局部最优的，并且最后得到的结果是全局最优的。</p>
-<h3 id="1-分配饼干"><a href="#1-分配饼干" class="headerlink" title="1. 分配饼干"></a>1. <a href="https://leetcode-cn.com/problems/assign-cookies/" target="_blank" rel="noopener">分配饼干</a></h3><p>每个孩子都有一个满足度 g，每个饼干都有一个大小 s，只有饼干的大小<strong>大于等于</strong>一个孩子的满足度，该孩子才会获得满足。求解最多可以获得满足的孩子数量。</p>
-<ol>
-<li>给一个孩子的饼干应当尽量小并且又能满足该孩子，这样大饼干才能拿来给满足度比较大的孩子。</li>
-<li>因为满足度最小的孩子最容易得到满足，所以先满足满足度最小的孩子。</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findContentChildren</span><span class="params">(self, g: List[int], s: List[int])</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> len(g) == <span class="number">0</span> <span class="keyword">or</span> len(s) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        g.sort()</span><br><span class="line">        s.sort()</span><br><span class="line">        gi, si = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> gi &lt; len(g) <span class="keyword">and</span> si &lt; len(s):</span><br><span class="line">            <span class="keyword">if</span> g[gi] &lt;= s[si]:</span><br><span class="line">                gi += <span class="number">1</span></span><br><span class="line">            si += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> gi</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/07/16/3.%E8%B4%AA%E5%BF%83%E6%80%9D%E6%83%B3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/16/3.%E8%B4%AA%E5%BF%83%E6%80%9D%E6%83%B3/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-5.分治" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/16/5.%E5%88%86%E6%B2%BB/">分治思想</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/07/16/5.%E5%88%86%E6%B2%BB/" class="archive-article-date">
-  	<time datetime="2020-07-16T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-给表达式加括号"><a href="#1-给表达式加括号" class="headerlink" title="1. 给表达式加括号"></a>1. <a href="https://leetcode-cn.com/problems/different-ways-to-add-parentheses/description/" target="_blank" rel="noopener">给表达式加括号</a></h3><p>给定一个含有数字和运算符的字符串，为表达式添加括号，改变其运算优先级以求出不同的结果。你需要给出所有可能的组合的结果。有效的运算符号包含 +, - 以及 * 。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;2*3-4*5&quot;</span><br><span class="line">输出: [-34, -14, -10, -10, 10]</span><br><span class="line">解释: </span><br><span class="line">(2*(3-(4*5))) &#x3D; -34 </span><br><span class="line">((2*3)-(4*5)) &#x3D; -14 </span><br><span class="line">((2*(3-4))*5) &#x3D; -10 </span><br><span class="line">(2*((3-4)*5)) &#x3D; -10 </span><br><span class="line">(((2*3)-4)*5) &#x3D; 10</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/07/16/5.%E5%88%86%E6%B2%BB/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法思想//" class="article-tag-list-link color5">算法思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/16/5.%E5%88%86%E6%B2%BB/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-6.数组与矩阵" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/15/6.%E6%95%B0%E7%BB%84%E4%B8%8E%E7%9F%A9%E9%98%B5/">数组与矩阵</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/07/15/6.%E6%95%B0%E7%BB%84%E4%B8%8E%E7%9F%A9%E9%98%B5/" class="archive-article-date">
-  	<time datetime="2020-07-15T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-把数组中的0移到末尾"><a href="#1-把数组中的0移到末尾" class="headerlink" title="1. 把数组中的0移到末尾"></a>1. <a href="https://leetcode-cn.com/problems/move-zeroes" target="_blank" rel="noopener">把数组中的0移到末尾</a></h3><p>给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: [0,1,0,3,12]</span><br><span class="line">输出: [1,3,12,0,0]</span><br><span class="line">说明:</span><br><span class="line">必须在原数组上操作，不能拷贝额外的数组。</span><br><span class="line">尽量减少操作次数。</span><br></pre></td></tr></table></figure>
-
-<p>将非0元素按读取顺序放在数组的前面，剩下的位置全放0。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">moveZeroes</span><span class="params">(self, nums: List[int])</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums in-place instead.</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        index = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="keyword">if</span> num != <span class="number">0</span>:</span><br><span class="line">                nums[index] = num</span><br><span class="line">                index += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> index &lt; len(nums):</span><br><span class="line">            nums[index] = <span class="number">0</span></span><br><span class="line">            index += <span class="number">1</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/07/15/6.%E6%95%B0%E7%BB%84%E4%B8%8E%E7%9F%A9%E9%98%B5/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/15/6.%E6%95%B0%E7%BB%84%E4%B8%8E%E7%9F%A9%E9%98%B5/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-5.字符串" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/14/5.%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/07/14/5.%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="archive-article-date">
-  	<time datetime="2020-07-14T02:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-字符串循环移位包含"><a href="#1-字符串循环移位包含" class="headerlink" title="1. 字符串循环移位包含"></a>1. 字符串循环移位包含</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s1 &#x3D; AABCD, s2 &#x3D; CDAA</span><br><span class="line">Return : true</span><br></pre></td></tr></table></figure>
-
-<p>给定两个字符串 s1 和 s2，要求判定 s2 是否能够被 s1 做循环移位得到的字符串包含。</p>
-<p>s1 进行循环移位的结果是 s1s1 的子字符串，因此只要判断 s2 是否是 s1s1 的子字符串即可。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isContainsByConcal</span><span class="params">(a, b)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> a <span class="keyword">or</span> <span class="keyword">not</span> b: <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    new_a = a + a</span><br><span class="line">    <span class="keyword">return</span> b <span class="keyword">in</span> new_a</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/07/14/5.%E5%AD%97%E7%AC%A6%E4%B8%B2/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/14/5.%E5%AD%97%E7%AC%A6%E4%B8%B2/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-4.哈希表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/12/4.%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/07/12/4.%E5%93%88%E5%B8%8C%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2020-07-12T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>哈希表使用 O(N) 空间复杂度存储数据，并且以 O(1) 时间复杂度求解问题。  </p>
-<h3 id="1-数组中两个数的和为给定值"><a href="#1-数组中两个数的和为给定值" class="headerlink" title="1. 数组中两个数的和为给定值"></a>1. <a href="https://leetcode-cn.com/problems/two-sum" target="_blank" rel="noopener">数组中两个数的和为给定值</a></h3><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
-<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">给定 nums &#x3D; [2, 7, 11, 15], target &#x3D; 9</span><br><span class="line">因为 nums[0] + nums[1] &#x3D; 2 + 7 &#x3D; 9</span><br><span class="line">所以返回 [0, 1]</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums: List[int], target: int)</span> -&gt; List[int]:</span></span><br><span class="line">        map = &#123;&#125; <span class="comment"># 新建一个字典存放nums和其索引</span></span><br><span class="line">        <span class="keyword">for</span> index, num <span class="keyword">in</span> enumerate(nums):</span><br><span class="line">            num1 = target - num</span><br><span class="line">            <span class="keyword">if</span> num1 <span class="keyword">in</span> map: <span class="comment"># 如果其差值在map中，说明找到了</span></span><br><span class="line">                <span class="keyword">return</span> [map[num1], index] <span class="comment"># 返回这两个数的索引</span></span><br><span class="line">            map[num] = index <span class="comment"># 将键值对num，index存到map中，避免在判断时num和num1相同</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/07/12/4.%E5%93%88%E5%B8%8C%E8%A1%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/12/4.%E5%93%88%E5%B8%8C%E8%A1%A8/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-3.栈和队列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/10/3.%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/">栈和队列</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/07/10/3.%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" class="archive-article-date">
-  	<time datetime="2020-07-10T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-用栈实现队列"><a href="#1-用栈实现队列" class="headerlink" title="1. 用栈实现队列"></a>1. <a href="https://leetcode-cn.com/problems/implement-queue-using-stacks" target="_blank" rel="noopener">用栈实现队列</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">使用栈实现队列的下列操作：</span><br><span class="line"></span><br><span class="line">push(x) -- 将一个元素放入队列的尾部。</span><br><span class="line">pop() -- 从队列首部移除元素。</span><br><span class="line">peek() -- 返回队列首部的元素。</span><br><span class="line">empty() -- 返回队列是否为空。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyQueue</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.s1 = []</span><br><span class="line">        self.s2 = []</span><br><span class="line">	</span><br><span class="line">    <span class="comment"># 添加元素到队尾</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">push</span><span class="params">(self, x: int)</span> -&gt; <span class="keyword">None</span>:</span> </span><br><span class="line">        self.s1.append(x)</span><br><span class="line">        </span><br><span class="line">    <span class="comment"># 返回队头元素</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">peek</span><span class="params">(self)</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> self.s2:  <span class="comment"># s2 为空、s1 不为空时，弹出 s1 的元素并添加到 s2 中</span></span><br><span class="line">            <span class="keyword">while</span> self.s1:</span><br><span class="line">                self.s2.append(self.s1.pop())</span><br><span class="line">        <span class="keyword">return</span> self.s2[<span class="number">-1</span>]  <span class="comment"># 返回 s2 最后的元素</span></span><br><span class="line">	</span><br><span class="line">    <span class="comment"># 删除队头的元素并返回</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pop</span><span class="params">(self)</span> -&gt; int:</span></span><br><span class="line">        self.peek()  <span class="comment"># 弹出元素之前，先调用 peek 保证 s2 中的元素不为空</span></span><br><span class="line">        <span class="keyword">return</span> self.s2.pop()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 判断队列是否为空</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">empty</span><span class="params">(self)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">not</span> self.s1 <span class="keyword">and</span> <span class="keyword">not</span> self.s2  <span class="comment"># 两个栈都为空，说明队列为空</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/07/10/3.%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/10/3.%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-4.二分查找" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/10/4.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/07/10/4.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" class="archive-article-date">
-  	<time datetime="2020-07-10T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="0-二分查找"><a href="#0-二分查找" class="headerlink" title="0. 二分查找"></a>0. 二分查找</h3><p><strong>正常实现</strong>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input : [1,2,3,4,5]</span><br><span class="line">target : 3</span><br><span class="line">return the index : 2</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binarySearch</span><span class="params">(nums, target)</span>:</span></span><br><span class="line">    l, r = <span class="number">0</span>, len(nums) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> l &lt;= h:</span><br><span class="line">        mid = l + (r - l) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> nums[mid] == target:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> nums[mid] &gt; target:</span><br><span class="line">            r = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">elif</span> nums[mid] &lt; target:</span><br><span class="line">            l = mid + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>时间复杂度</strong>：二分查找每次将区间减半，使得时间复杂度为 <code>O(logN)</code>。</p>
-<p><strong>mid 的计算</strong>：直接使用 <code>(l + r) // 2</code> 可能会出现加溢出，也就是说加法的结果大于整型能够表示的范围。但 <code>l + (r - l) // 2</code> 不会造成溢出。</p>
-        
-          <a class="article-more-a" href="/2020/07/10/4.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/10/4.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-2.树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/09/2.%E6%A0%91/">树</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/07/09/2.%E6%A0%91/" class="archive-article-date">
-  	<time datetime="2020-07-09T10:23:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、递归"><a href="#一、递归" class="headerlink" title="一、递归"></a>一、递归</h2><p>一棵树要么是空树，要么有两个指针，每个指针指向一棵树。树是一种递归结构，很多树的问题可以使用递归来处理。 </p>
-<h3 id="1-1-树的高度"><a href="#1-1-树的高度" class="headerlink" title="1.1 树的高度"></a>1.1 <a href="https://leetcode-cn.com/problems/maximum-depth-of-binary-tree" target="_blank" rel="noopener">树的高度</a></h3><p>给定一个二叉树，找出其最大深度。<br>二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。</p>
-<p>说明: 叶子节点是指没有子节点的节点。</p>
-<ul>
-<li>递归法：</li>
+        <h2 id="0-动态规划"><a href="#0-动态规划" class="headerlink" title="0. 动态规划"></a>0. 动态规划</h2><ul>
+<li><strong>动态规划 (Dynamic Programming) 问题的一般形式就是求最值</strong>，比如说让你求<strong>最长</strong>递增子序列呀，<strong>最小</strong>编辑距离呀等等。</li>
+<li><strong>求解动态规划的核心问题是穷举</strong>，因为要求最值，肯定要把所有可行的答案穷举出来，然后在其中找最值。</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxDepth</span><span class="params">(self, root: TreeNode)</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">return</span> max(self.maxDepth(root.left), self.maxDepth(root.right)) + <span class="number">1</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/07/09/2.%E6%A0%91/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/09/2.%E6%A0%91/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-特征归一化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/06/%E7%89%B9%E5%BE%81%E5%BD%92%E4%B8%80%E5%8C%96/">特征归一化</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/07/06/%E7%89%B9%E5%BE%81%E5%BD%92%E4%B8%80%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2020-07-06T07:05:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h2><p>为了消除数据特征之间的量纲影响，需要对特征进行归一化处理，使得不同指标之间具有可比性。</p>
-<p>归一化和标准化都属于四种 <code>Feature scaling</code> (特征缩放)，这四种分别是 </p>
+<p><strong>动态规划的思考模式：</strong></p>
 <ol>
-<li><code>Rescaling (min-max normalization)</code> 有时简称 <code>normalization</code></li>
+<li>动态规划的穷举有点特别，因为这类问题<strong>存在「重叠子问题」</strong>，如果暴力穷举的话效率会极其低下，所以<strong>需要「备忘录」或者「DP table」来优化穷举过程</strong>，避免不必要的计算。</li>
+<li>动态规划问题一定会<strong>具备「最优子结构」</strong>，才能通过子问题的最值得到原问题的最值。</li>
+<li>虽然动态规划的核心思想就是穷举求最值，但是问题可以千变万化，穷举所有可行解其实并不是一件容易的事，只有列出<strong>正确的「状态转移方程」</strong>才能正确地穷举。</li>
 </ol>
-<p>$$<br>x^` = \frac{x - min(x)} {max(x) - min(x)}<br>$$</p>
-<ol start="2">
-<li><code>Mean normalization </code></li>
-</ol>
-<p>$$<br>x^` = \frac{x - mean(x)} {max(x) - min(x)}<br>$$</p>
-<ol start="3">
-<li><code>Standardization (Z-score normalization) </code></li>
-</ol>
-<p>$$<br>x^` = \frac{x - mean(x)} {\sigma}<br>$$</p>
-<ol start="4">
-<li><code>Scaling to unit length</code></li>
-</ol>
-<p>$$<br>x^` = \frac{x - mean(x)} {\sigma}<br>$$</p>
-<p>在一些博客中，一般把第一种叫做归一化，第三种叫做标准化。</p>
-<blockquote>
-<p>注：以下归一化的翻译来自《百面机器学习》</p>
-</blockquote>
-<p>对<strong>数值类型</strong>的特征做归一化可以将所有的特征都<strong>统一到一个大致相同的数值区间内</strong>，常用的为一下两种：</p>
+<p><strong>明确 base case -&gt; 明确「状态」-&gt; 明确「选择」 -&gt; 定义 dp 数组/函数的含义</strong>。</p>
+<p>按上面的套路走，最后的结果就可以套这个框架：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初始化 base case</span></span><br><span class="line">dp[<span class="number">0</span>][<span class="number">0</span>][...] = base</span><br><span class="line"><span class="comment"># 进行状态转移</span></span><br><span class="line"><span class="keyword">for</span> 状态<span class="number">1</span> <span class="keyword">in</span> 状态<span class="number">1</span>的所有取值:</span><br><span class="line">    <span class="keyword">for</span> 状态<span class="number">2</span> <span class="keyword">in</span> 状态<span class="number">2</span>的所有取值:</span><br><span class="line">        <span class="keyword">for</span> ...:</span><br><span class="line">            dp[状态<span class="number">1</span>][状态<span class="number">2</span>][...] = 求最值(选择<span class="number">1</span>, 选择<span class="number">2</span>, ...)</span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2020/07/06/%E7%89%B9%E5%BE%81%E5%BD%92%E4%B8%80%E5%8C%96/#more">more >></a>
+          <a class="article-more-a" href="/2020/07/20/2.7.%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/#more">more >></a>
         
       
 
@@ -896,7 +205,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
@@ -906,7 +215,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/06/%E7%89%B9%E5%BE%81%E5%BD%92%E4%B8%80%E5%8C%96/">阅读全文 >></a>
+          <a class="article-more-a" href="/2020/07/20/2.7.%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">阅读全文 >></a>
         </p>
       
 
@@ -939,44 +248,125 @@
 
 
   
-    <article id="post-列表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-3.1.剑指offer：第一部分" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/03/%E5%88%97%E8%A1%A8/">列表</a>
+      <a class="article-title" href="/2020/07/20/3.1.%E5%89%91%E6%8C%87offer%EF%BC%9A%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86/">剑指offer：第一部分</a>
     </h1>
   
 
         
         
 
-<a href="/2020/07/03/%E5%88%97%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2020-07-03T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-03</time>
+<a href="/2020/07/20/3.1.%E5%89%91%E6%8C%87offer%EF%BC%9A%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86/" class="archive-article-date">
+  	<time datetime="2020-07-20T01:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-创建列表：-、list"><a href="#1-创建列表：-、list" class="headerlink" title="1. 创建列表：[ ]、list()"></a>1. 创建列表：[ ]、list()</h3><ol>
-<li><code> []</code></li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = []</span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><code>list()</code>：传入可迭代对象</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = list()  </span><br><span class="line">a = list(range(<span class="number">2</span>))  <span class="comment"># [0, 1]</span></span><br><span class="line">a = list((<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>))  <span class="comment"># [1, 2, 3]</span></span><br><span class="line">a = list(<span class="string">"abc"</span>)  <span class="comment"># ['a', 'b', 'c']</span></span><br></pre></td></tr></table></figure>
+        <h3 id="3-数组中重复的数字"><a href="#3-数组中重复的数字" class="headerlink" title="3. 数组中重复的数字"></a><a href="https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/" target="_blank" rel="noopener">3. 数组中重复的数字</a></h3><p>找出数组中重复的数字。</p>
+<p>在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：[2, 3, 1, 0, 2, 5, 3]</span><br><span class="line">输出：2 或 3</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>判断是否为可迭代对象</li>
+<li><strong>方法一</strong>：对数组排序从前往后扫描，排序一个长度为 n 的数组需要 <code>O(nlogn)</code> 的时间复杂度。</li>
+<li><strong>方法二</strong>：利用哈希表，从头到尾扫描数组，利用 <code>O(1)</code> 的时间判断哈希表中是否已存在此元素，若存在则找到重复元素，反之将扫描到的元素添加到哈希表中。算法时间复杂度为 <code>O(n)</code>，空间复杂度为 <code>O(n)</code>。</li>
+<li><strong>方法三</strong>：重新排列此数组，从头到尾扫描数组，判断每个元素与下标是否相等，相等则继续扫描下一个元素，不相等则判断当前元素与当前元素为下标的元素是否相等，相等则找到重复数字，不相等则交换。</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections.abc <span class="keyword">import</span> Iterable</span><br><span class="line">isinstance(<span class="number">123</span>, Iterable)  <span class="comment"># True</span></span><br></pre></td></tr></table></figure>
+<p><strong>Python</strong>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findRepeatNumber</span><span class="params">(self, nums: [int])</span> -&gt; int:</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; len(nums):</span><br><span class="line">            <span class="keyword">if</span> nums[i] == i:</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">if</span> nums[nums[i]] == nums[i]: <span class="keyword">return</span> nums[i]</span><br><span class="line">            nums[nums[i]], nums[i] = nums[i], nums[nums[i]]</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Java</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findRepeatNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(i &lt; nums.length) &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i] == i) &#123;</span><br><span class="line">                i++;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(nums[nums[i]] == nums[i]) <span class="keyword">return</span> nums[i];</span><br><span class="line">            <span class="keyword">int</span> tmp = nums[i];</span><br><span class="line">            nums[i] = nums[tmp];</span><br><span class="line">            nums[tmp] = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2020/07/03/%E5%88%97%E8%A1%A8/#more">more >></a>
+          <a class="article-more-a" href="/2020/07/20/3.1.%E5%89%91%E6%8C%87offer%EF%BC%9A%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法与数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/20/3.1.%E5%89%91%E6%8C%87offer%EF%BC%9A%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-4.2装饰器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/19/4.2%E8%A3%85%E9%A5%B0%E5%99%A8/">装饰器</a>
+    </h1>
+  
+
+        
+        
+
+<a href="/2020/07/19/4.2%E8%A3%85%E9%A5%B0%E5%99%A8/" class="archive-article-date">
+  	<time datetime="2020-07-19T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>装饰器本质上是一个 Python 函数，它可以让其他函数在不需要做任何代码变动的前提下增加额外功能，装饰器的返回值也是一个函数对象。它经常用于有切面需求的场景，比如：插入日志、性能测试、事务处理、缓存、权限校验等场景。有了装饰器，就可以抽离出大量与函数功能本身无关的雷同代码并继续重用。</p>
+        
+          <a class="article-more-a" href="/2020/07/19/4.2%E8%A3%85%E9%A5%B0%E5%99%A8/#more">more >></a>
         
       
 
@@ -1000,7 +390,601 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/03/%E5%88%97%E8%A1%A8/">阅读全文 >></a>
+          <a class="article-more-a" href="/2020/07/19/4.2%E8%A3%85%E9%A5%B0%E5%99%A8/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-2.3.贪心思想" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/16/2.3.%E8%B4%AA%E5%BF%83%E6%80%9D%E6%83%B3/">贪心算法</a>
+    </h1>
+  
+
+        
+        
+
+<a href="/2020/07/16/2.3.%E8%B4%AA%E5%BF%83%E6%80%9D%E6%83%B3/" class="archive-article-date">
+  	<time datetime="2020-07-16T04:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>保证每次操作都是局部最优的，并且最后得到的结果是全局最优的。</p>
+<h3 id="1-分配饼干"><a href="#1-分配饼干" class="headerlink" title="1. 分配饼干"></a>1. <a href="https://leetcode-cn.com/problems/assign-cookies/" target="_blank" rel="noopener">分配饼干</a></h3><p>每个孩子都有一个满足度 g，每个饼干都有一个大小 s，只有饼干的大小<strong>大于等于</strong>一个孩子的满足度，该孩子才会获得满足。求解最多可以获得满足的孩子数量。</p>
+<ol>
+<li>给一个孩子的饼干应当尽量小并且又能满足该孩子，这样大饼干才能拿来给满足度比较大的孩子。</li>
+<li>因为满足度最小的孩子最容易得到满足，所以先满足满足度最小的孩子。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findContentChildren</span><span class="params">(self, g: List[int], s: List[int])</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> len(g) == <span class="number">0</span> <span class="keyword">or</span> len(s) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        g.sort()</span><br><span class="line">        s.sort()</span><br><span class="line">        gi, si = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> gi &lt; len(g) <span class="keyword">and</span> si &lt; len(s):</span><br><span class="line">            <span class="keyword">if</span> g[gi] &lt;= s[si]:</span><br><span class="line">                gi += <span class="number">1</span></span><br><span class="line">            si += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> gi</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/07/16/2.3.%E8%B4%AA%E5%BF%83%E6%80%9D%E6%83%B3/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法思想</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/16/2.3.%E8%B4%AA%E5%BF%83%E6%80%9D%E6%83%B3/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-2.5.分治" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/16/2.5.%E5%88%86%E6%B2%BB/">分治思想</a>
+    </h1>
+  
+
+        
+        
+
+<a href="/2020/07/16/2.5.%E5%88%86%E6%B2%BB/" class="archive-article-date">
+  	<time datetime="2020-07-16T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-给表达式加括号"><a href="#1-给表达式加括号" class="headerlink" title="1. 给表达式加括号"></a>1. <a href="https://leetcode-cn.com/problems/different-ways-to-add-parentheses/description/" target="_blank" rel="noopener">给表达式加括号</a></h3><p>给定一个含有数字和运算符的字符串，为表达式添加括号，改变其运算优先级以求出不同的结果。你需要给出所有可能的组合的结果。有效的运算符号包含 +, - 以及 * 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;2*3-4*5&quot;</span><br><span class="line">输出: [-34, -14, -10, -10, 10]</span><br><span class="line">解释: </span><br><span class="line">(2*(3-(4*5))) &#x3D; -34 </span><br><span class="line">((2*3)-(4*5)) &#x3D; -14 </span><br><span class="line">((2*(3-4))*5) &#x3D; -10 </span><br><span class="line">(2*((3-4)*5)) &#x3D; -10 </span><br><span class="line">(((2*3)-4)*5) &#x3D; 10</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/07/16/2.5.%E5%88%86%E6%B2%BB/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/算法思想//" class="article-tag-list-link color5">算法思想</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/16/2.5.%E5%88%86%E6%B2%BB/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-1.6.数组与矩阵" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/15/1.6.%E6%95%B0%E7%BB%84%E4%B8%8E%E7%9F%A9%E9%98%B5/">数组与矩阵</a>
+    </h1>
+  
+
+        
+        
+
+<a href="/2020/07/15/1.6.%E6%95%B0%E7%BB%84%E4%B8%8E%E7%9F%A9%E9%98%B5/" class="archive-article-date">
+  	<time datetime="2020-07-15T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-把数组中的0移到末尾"><a href="#1-把数组中的0移到末尾" class="headerlink" title="1. 把数组中的0移到末尾"></a>1. <a href="https://leetcode-cn.com/problems/move-zeroes" target="_blank" rel="noopener">把数组中的0移到末尾</a></h3><p>给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: [0,1,0,3,12]</span><br><span class="line">输出: [1,3,12,0,0]</span><br><span class="line">说明:</span><br><span class="line">必须在原数组上操作，不能拷贝额外的数组。</span><br><span class="line">尽量减少操作次数。</span><br></pre></td></tr></table></figure>
+
+<p>将非0元素按读取顺序放在数组的前面，剩下的位置全放0。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">moveZeroes</span><span class="params">(self, nums: List[int])</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums in-place instead.</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        index = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="keyword">if</span> num != <span class="number">0</span>:</span><br><span class="line">                nums[index] = num</span><br><span class="line">                index += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> index &lt; len(nums):</span><br><span class="line">            nums[index] = <span class="number">0</span></span><br><span class="line">            index += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/07/15/1.6.%E6%95%B0%E7%BB%84%E4%B8%8E%E7%9F%A9%E9%98%B5/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/15/1.6.%E6%95%B0%E7%BB%84%E4%B8%8E%E7%9F%A9%E9%98%B5/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-1.5.字符串" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/14/1.5.%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+    </h1>
+  
+
+        
+        
+
+<a href="/2020/07/14/1.5.%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="archive-article-date">
+  	<time datetime="2020-07-14T02:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-字符串循环移位包含"><a href="#1-字符串循环移位包含" class="headerlink" title="1. 字符串循环移位包含"></a>1. 字符串循环移位包含</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s1 &#x3D; AABCD, s2 &#x3D; CDAA</span><br><span class="line">Return : true</span><br></pre></td></tr></table></figure>
+
+<p>给定两个字符串 s1 和 s2，要求判定 s2 是否能够被 s1 做循环移位得到的字符串包含。</p>
+<p>s1 进行循环移位的结果是 s1s1 的子字符串，因此只要判断 s2 是否是 s1s1 的子字符串即可。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isContainsByConcal</span><span class="params">(a, b)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> a <span class="keyword">or</span> <span class="keyword">not</span> b: <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    new_a = a + a</span><br><span class="line">    <span class="keyword">return</span> b <span class="keyword">in</span> new_a</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/07/14/1.5.%E5%AD%97%E7%AC%A6%E4%B8%B2/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/14/1.5.%E5%AD%97%E7%AC%A6%E4%B8%B2/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-1.4.哈希表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/12/1.4.%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a>
+    </h1>
+  
+
+        
+        
+
+<a href="/2020/07/12/1.4.%E5%93%88%E5%B8%8C%E8%A1%A8/" class="archive-article-date">
+  	<time datetime="2020-07-12T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>哈希表使用 O(N) 空间复杂度存储数据，并且以 O(1) 时间复杂度求解问题。  </p>
+<h3 id="1-数组中两个数的和为给定值"><a href="#1-数组中两个数的和为给定值" class="headerlink" title="1. 数组中两个数的和为给定值"></a>1. <a href="https://leetcode-cn.com/problems/two-sum" target="_blank" rel="noopener">数组中两个数的和为给定值</a></h3><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">给定 nums &#x3D; [2, 7, 11, 15], target &#x3D; 9</span><br><span class="line">因为 nums[0] + nums[1] &#x3D; 2 + 7 &#x3D; 9</span><br><span class="line">所以返回 [0, 1]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums: List[int], target: int)</span> -&gt; List[int]:</span></span><br><span class="line">        map = &#123;&#125; <span class="comment"># 新建一个字典存放nums和其索引</span></span><br><span class="line">        <span class="keyword">for</span> index, num <span class="keyword">in</span> enumerate(nums):</span><br><span class="line">            num1 = target - num</span><br><span class="line">            <span class="keyword">if</span> num1 <span class="keyword">in</span> map: <span class="comment"># 如果其差值在map中，说明找到了</span></span><br><span class="line">                <span class="keyword">return</span> [map[num1], index] <span class="comment"># 返回这两个数的索引</span></span><br><span class="line">            map[num] = index <span class="comment"># 将键值对num，index存到map中，避免在判断时num和num1相同</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/07/12/1.4.%E5%93%88%E5%B8%8C%E8%A1%A8/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/12/1.4.%E5%93%88%E5%B8%8C%E8%A1%A8/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-1.3.栈和队列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/10/1.3.%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/">栈和队列</a>
+    </h1>
+  
+
+        
+        
+
+<a href="/2020/07/10/1.3.%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" class="archive-article-date">
+  	<time datetime="2020-07-10T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-用栈实现队列"><a href="#1-用栈实现队列" class="headerlink" title="1. 用栈实现队列"></a>1. <a href="https://leetcode-cn.com/problems/implement-queue-using-stacks" target="_blank" rel="noopener">用栈实现队列</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">使用栈实现队列的下列操作：</span><br><span class="line"></span><br><span class="line">push(x) -- 将一个元素放入队列的尾部。</span><br><span class="line">pop() -- 从队列首部移除元素。</span><br><span class="line">peek() -- 返回队列首部的元素。</span><br><span class="line">empty() -- 返回队列是否为空。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyQueue</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.s1 = []</span><br><span class="line">        self.s2 = []</span><br><span class="line">	</span><br><span class="line">    <span class="comment"># 添加元素到队尾</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">push</span><span class="params">(self, x: int)</span> -&gt; <span class="keyword">None</span>:</span> </span><br><span class="line">        self.s1.append(x)</span><br><span class="line">        </span><br><span class="line">    <span class="comment"># 返回队头元素</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">peek</span><span class="params">(self)</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> self.s2:  <span class="comment"># s2 为空、s1 不为空时，弹出 s1 的元素并添加到 s2 中</span></span><br><span class="line">            <span class="keyword">while</span> self.s1:</span><br><span class="line">                self.s2.append(self.s1.pop())</span><br><span class="line">        <span class="keyword">return</span> self.s2[<span class="number">-1</span>]  <span class="comment"># 返回 s2 最后的元素</span></span><br><span class="line">	</span><br><span class="line">    <span class="comment"># 删除队头的元素并返回</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pop</span><span class="params">(self)</span> -&gt; int:</span></span><br><span class="line">        self.peek()  <span class="comment"># 弹出元素之前，先调用 peek 保证 s2 中的元素不为空</span></span><br><span class="line">        <span class="keyword">return</span> self.s2.pop()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 判断队列是否为空</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">empty</span><span class="params">(self)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">not</span> self.s1 <span class="keyword">and</span> <span class="keyword">not</span> self.s2  <span class="comment"># 两个栈都为空，说明队列为空</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/07/10/1.3.%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/10/1.3.%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-2.4.二分查找" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/10/2.4.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a>
+    </h1>
+  
+
+        
+        
+
+<a href="/2020/07/10/2.4.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" class="archive-article-date">
+  	<time datetime="2020-07-10T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="0-二分查找"><a href="#0-二分查找" class="headerlink" title="0. 二分查找"></a>0. 二分查找</h3><p><strong>正常实现</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input : [1,2,3,4,5]</span><br><span class="line">target : 3</span><br><span class="line">return the index : 2</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binarySearch</span><span class="params">(nums, target)</span>:</span></span><br><span class="line">    l, r = <span class="number">0</span>, len(nums) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> l &lt;= h:</span><br><span class="line">        mid = l + (r - l) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> nums[mid] == target:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> nums[mid] &gt; target:</span><br><span class="line">            r = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">elif</span> nums[mid] &lt; target:</span><br><span class="line">            l = mid + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>时间复杂度</strong>：二分查找每次将区间减半，使得时间复杂度为 <code>O(logN)</code>。</p>
+<p><strong>mid 的计算</strong>：直接使用 <code>(l + r) // 2</code> 可能会出现加溢出，也就是说加法的结果大于整型能够表示的范围。但 <code>l + (r - l) // 2</code> 不会造成溢出。</p>
+        
+          <a class="article-more-a" href="/2020/07/10/2.4.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法思想</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/10/2.4.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">阅读全文 >></a>
         </p>
       
 
@@ -1179,11 +1163,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法与数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
             <div class="clearfix"></div>
