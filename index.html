@@ -178,9 +178,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ol>
-<li><strong>深拷贝 <code>deepcopy()</code>**：</strong>将被复制对象完全再复制一遍作为独立个体存在<strong>，改变原有被复制对象</strong>不会**对已经复制出来的新对象产生影响。 </li>
-<li><strong>赋值 <code>=</code>**：</strong>不会产生一个独立的对象单独存在，他只是将原有的数据块打上一个新标签，<strong>所以当其中一个标签被改变的时候，数据块就</strong>会发生变化**，另一个标签也会随之改变。</li>
-<li>**浅拷贝 <code>copy()</code>**：<ul>
+<li><strong>深拷贝 deepcopy()**：</strong>将被复制对象完全再复制一遍作为独立个体存在<strong>，改变原有被复制对象</strong>不会**对已经复制出来的新对象产生影响。 </li>
+<li><strong>赋值 =**：</strong>不会产生一个独立的对象单独存在，他只是将原有的数据块打上一个新标签，<strong>所以当其中一个标签被改变的时候，数据块就</strong>会发生变化**，另一个标签也会随之改变。</li>
+<li>**浅拷贝 copy()**：<ul>
 <li>当浅拷贝的值是<strong>不可变对象（数值，字符串，元组）</strong>时和 “赋值 =” 的情况一样，拷贝后对象的 id 值与原来的值相同。</li>
 <li>当浅复制的值是<strong>可变对象（列表和元组）</strong>时会产生一个 “不是那么独立的对象” 存在。有两种情况：<ol>
 <li>复制的对象中<strong>无复杂子对象</strong>，原来值的改变并不会影响浅复制的值，同时浅拷贝的值改变也并不会影响原来的值。原来值的 id 值与浅拷贝原来的值不同。</li>
