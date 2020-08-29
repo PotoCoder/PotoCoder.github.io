@@ -6,15 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 机器学习 | Poto Coder 的博客</title>
+  <title>剑指offer：第四部分 | Poto Coder 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Poto Coder 的博客">
-<meta property="og:url" content="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.html">
+  <meta name="description" content="39. 数组中出现次数超过一半的数字数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。你可以假设数组是非空的，并且给定的数组总是存在多数元素。 12输入: [1, 2, 3, 2, 2, 2, 5, 4, 2]输出: 2  本题常见解法如下：  哈希表统计法： 遍历数组 nums ，用 HashMap 统计各数字的数量，最终超过数组长度一半的数字则为众数。此方法时间和空间复杂度均为 O">
+<meta property="og:type" content="article">
+<meta property="og:title" content="剑指offer：第四部分">
+<meta property="og:url" content="http://yoursite.com/2020/08/09/3.4.%E5%89%91%E6%8C%87offer%EF%BC%9A%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86/index.html">
 <meta property="og:site_name" content="Poto Coder 的博客">
+<meta property="og:description" content="39. 数组中出现次数超过一半的数字数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。你可以假设数组是非空的，并且给定的数组总是存在多数元素。 12输入: [1, 2, 3, 2, 2, 2, 5, 4, 2]输出: 2  本题常见解法如下：  哈希表统计法： 遍历数组 nums ，用 HashMap 统计各数字的数量，最终超过数组长度一半的数字则为众数。此方法时间和空间复杂度均为 O">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.leetcode-cn.com/78e60b6c2ada7434ba69643047758e113fa732815f7c53791271c5e0f123687c-Picture1.png">
+<meta property="og:image" content="https://pic.leetcode-cn.com/58c7e6472155b49923b48daac10bd438b68e9504690cf45d5e739f3a8cb9cee1-Picture2.png">
+<meta property="og:image" content="https://pic.leetcode-cn.com/0e51d37b434ef0ad93882cdcb832f867e18b872833c0c360ad4580eb9ed4aeda-Picture3.png">
+<meta property="og:image" content="https://pic.leetcode-cn.com/2cd7d8a6a881b697a43f153d6c10e0e991817d78f92b9201b6ab71e44cb619de-Picture1.png">
+<meta property="article:published_time" content="2020-08-09T02:43:59.000Z">
+<meta property="article:modified_time" content="2020-08-24T00:49:27.406Z">
 <meta property="article:author" content="Poto Coder">
+<meta property="article:tag" content="算法与数据结构">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.leetcode-cn.com/78e60b6c2ada7434ba69643047758e113fa732815f7c53791271c5e0f123687c-Picture1.png">
   
     <link rel="alternative" href="/atom.xml" title="Poto Coder 的博客" type="application/atom+xml">
   
@@ -153,62 +163,385 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-3.4.剑指offer：第四部分" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/07/06/%E7%89%B9%E5%BE%81%E5%BD%92%E4%B8%80%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2020-07-06T07:05:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-06</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/06/%E7%89%B9%E5%BE%81%E5%BD%92%E4%B8%80%E5%8C%96/">特征归一化</a>
+    <h1 class="article-title" itemprop="name">
+      剑指offer：第四部分
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+
+<a href="/2020/08/09/3.4.%E5%89%91%E6%8C%87offer%EF%BC%9A%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86/" class="archive-article-date">
+  	<time datetime="2020-08-09T02:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="39-数组中出现次数超过一半的数字"><a href="#39-数组中出现次数超过一半的数字" class="headerlink" title="39. 数组中出现次数超过一半的数字"></a>39. <a href="https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/" target="_blank" rel="noopener">数组中出现次数超过一半的数字</a></h3><p>数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。你可以假设数组是非空的，并且给定的数组总是存在多数元素。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [1, 2, 3, 2, 2, 2, 5, 4, 2]</span><br><span class="line">输出: 2</span><br></pre></td></tr></table></figure>
+
+<p>本题常见解法如下：</p>
+<ol>
+<li>哈希表统计法： 遍历数组 nums ，用 HashMap 统计各数字的数量，最终超过数组长度一半的数字则为众数。此方法时间和空间复杂度均为 O(N)O(N) 。</li>
+<li>数组排序法： 将数组 nums 排序，由于众数的数量超过数组长度一半，因此 数组中点的元素 一定为众数。此方法时间复杂度 O(Nlog2N)。</li>
+<li>摩尔投票法： 核心理念为 “正负抵消” ；时间和空间复杂度分别为 O(N)O(N) 和 O(1)O(1) ；是本题的最佳解法。</li>
+</ol>
+<p><strong>摩尔投票法思路</strong>：如果总的票数 votes 为0，则将下一个数记为+1，后面与其相同的数记为+1，不同的数记为-1，直到 votes 为0，此时将下一个数记为+1，如此循环，最后返回最后一个使 votes 为1时x的值即可。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">majorityElement</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line">        votes = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="keyword">if</span> votes == <span class="number">0</span>: </span><br><span class="line">                x = num  <span class="comment"># 此时 x 为最后一个使 votes 为 1 的数</span></span><br><span class="line">            votes += <span class="number">1</span> <span class="keyword">if</span> num == x <span class="keyword">else</span> <span class="number">-1</span></span><br><span class="line">        <span class="keyword">return</span> x</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度 O(N) ： N 为数组 <code>nums</code> 长度。</li>
+<li>空间复杂度 O(1) ： votes 变量使用常数大小的额外空间。</li>
+</ul>
+<a id="more"></a> 
+
+
+
+<h3 id="40-最小的k个数"><a href="#40-最小的k个数" class="headerlink" title="40. 最小的k个数"></a>40. <a href="https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/" target="_blank" rel="noopener">最小的k个数</a></h3><p>输入整数数组 arr ，找出其中最小的 k 个数。例如，输入<code>4、5、1、6、2、7、3、8</code>这8个数字，则最小的4个数字是<code>1、2、3、4</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：arr &#x3D; [3,2,1], k &#x3D; 2</span><br><span class="line">输出：[1,2] 或者 [2,1]</span><br></pre></td></tr></table></figure>
+
+<p><strong>堆</strong>：利用大根堆实时维护数组中前 k 个最小值，Python 中只有小根堆，因此我们要对数组中所有的数取其相反数，才能使用小根堆维护前 k 小值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getLeastNumbers</span><span class="params">(self, arr: List[int], k: int)</span> -&gt; List[int]:</span></span><br><span class="line">        <span class="keyword">if</span> k == <span class="number">0</span>: <span class="keyword">return</span> []</span><br><span class="line">        hp = [-x <span class="keyword">for</span> x <span class="keyword">in</span> arr[:k]]</span><br><span class="line">        heapq.heapify(hp)  <span class="comment"># 创建小根堆</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(k, len(arr)):</span><br><span class="line">            <span class="keyword">if</span> -arr[i] &gt; hp[<span class="number">0</span>]:</span><br><span class="line">                heapq.heappop(hp)  <span class="comment"># 弹出堆顶元素</span></span><br><span class="line">                heapq.heappush(hp, -arr[i])</span><br><span class="line">        ans = [-x <span class="keyword">for</span> x <span class="keyword">in</span> hp]</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度：O(nlogk)，其中 n 是数组 arr 的长度。由于大根堆实时维护前 k 小值，所以插入删除都是 O(logk) 的时间复杂度，最坏情况下数组里 n 个数都会插入，所以一共需要 O(nlogk) 的时间复杂度。</li>
+<li>空间复杂度：O(k)，因为大根堆里最多 k 个数。</li>
+</ul>
+<p><strong>快速排序</strong>：利用快排将数组划分为小于划分点和大于划分点，小于的都在数组的左边，递归划分下去，知道小于等于划分点的数量为 k。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">partition</span><span class="params">(self, nums, l, r)</span>:</span></span><br><span class="line">        pivot = nums[r]  <span class="comment"># 最后一个数记为划分点</span></span><br><span class="line">        i = l - <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(l, r):</span><br><span class="line">            <span class="keyword">if</span> nums[j] &lt;= pivot:  <span class="comment"># 小于划分点的数划分到左边</span></span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">                nums[i], nums[j] = nums[j], nums[i]  <span class="comment"># 交换使得小于划分点的数位于左边</span></span><br><span class="line">        nums[i + <span class="number">1</span>], nums[r] = nums[r], nums[i + <span class="number">1</span>]  <span class="comment"># 将划分点放入数组中，使得数组变为：小|划分点|大</span></span><br><span class="line">        <span class="keyword">return</span> i + <span class="number">1</span>  <span class="comment"># 返回划分点的位置</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 从数组中随机抽取一个数作为划分点，并将此数与最后一个数交换</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">randomized_partition</span><span class="params">(self, nums, l, r)</span>:</span></span><br><span class="line">        i = random.randint(l, r)  <span class="comment"># 随机化 i 为 (l, r) 中的一个数</span></span><br><span class="line">        nums[r], nums[i] = nums[i], nums[r]  <span class="comment"># 将随机化的 i 交换到末尾</span></span><br><span class="line">        <span class="keyword">return</span> self.partition(nums, l, r)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 划分数组 arr 的 [l,r] 部分，使前 k 小的数在数组的左侧</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">randomized_selected</span><span class="params">(self, arr, l, r, k)</span>:</span></span><br><span class="line">        pos = self.randomized_partition(arr, l, r)  <span class="comment"># 得到划分之后数组中划分点的位置</span></span><br><span class="line">        num = pos - l + <span class="number">1</span>  <span class="comment"># 小于等于划分点的数量</span></span><br><span class="line">        <span class="keyword">if</span> k &lt; num:  <span class="comment"># 小于等于划分点的数量比 k 大时，从小于划分点的数中接着划分</span></span><br><span class="line">            self.randomized_selected(arr, l, pos - <span class="number">1</span>, k)</span><br><span class="line">        <span class="keyword">elif</span> k &gt; num:  <span class="comment"># 小于等于划分点的数量比 k 小时，从大于划分点的数中再划分 k-num 个数</span></span><br><span class="line">            self.randomized_selected(arr, pos + <span class="number">1</span>, r, k - num)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getLeastNumbers</span><span class="params">(self, arr: List[int], k: int)</span> -&gt; List[int]:</span></span><br><span class="line">        <span class="keyword">if</span> k == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> list()</span><br><span class="line">        self.randomized_selected(arr, <span class="number">0</span>, len(arr) - <span class="number">1</span>, k)</span><br><span class="line">        <span class="keyword">return</span> arr[:k]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度：期望为 O(n) ，由于证明过程很繁琐，所以不再这里展开讲。具体证明可以参考《算法导论》第 9 章第 2 小节。最坏情况下的时间复杂度为 O(n^2)。情况最差时，每次的划分点都是最大值或最小值，一共需要划分 n - 1 次，而一次划分需要线性的时间复杂度，所以最坏情况下时间复杂度为 O(n^2)。</li>
+<li>空间复杂度：期望为 O(logn)，递归调用的期望深度为 O(logn)，每层需要的空间为 O(1)，只有常数个变量。最坏情况下的空间复杂度为 O(n)。最坏情况下需要划分 n 次，即 randomized_selected 函数递归调用最深 n - 1 层，而每层由于需要 O(1) 的空间，所以一共需要 O(n) 的空间复杂度。</li>
+</ul>
+<h3 id="41-数据流中的中位数"><a href="#41-数据流中的中位数" class="headerlink" title="41. 数据流中的中位数"></a>41. <a href="https://leetcode-cn.com/problems/shu-ju-liu-zhong-de-zhong-wei-shu-lcof/" target="_blank" rel="noopener">数据流中的中位数</a></h3><p>如何得到一个数据流中的中位数？如果从数据流中读出奇数个数值，那么中位数就是所有数值排序之后位于中间的数值。如果从数据流中读出偶数个数值，那么中位数就是所有数值排序之后中间两个数的平均值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">例如，</span><br><span class="line">[2,3,4] 的中位数是 3</span><br><span class="line">[2,3] 的中位数是 (2 + 3) &#x2F; 2 &#x3D; 2.5</span><br><span class="line">设计一个支持以下两种操作的数据结构：</span><br><span class="line">void addNum(int num) - 从数据流中添加一个整数到数据结构中。</span><br><span class="line">double findMedian() - 返回目前所有元素的中位数。</span><br></pre></td></tr></table></figure>
+
+<p><strong>思路</strong>：利用大根堆和小根堆，各保存一半的数据，大根堆的最大值小于小根堆的最小值，当数据为偶数时，先将要添加的数插入小根堆中，再将小根堆的堆顶元素插入大根堆中；当数据为奇数时，先将数据插入大根堆中，然后将大根堆中的堆顶元素插入到小根堆中，以此来保证大根堆中的元素小于小根堆中的元素。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> heapq <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MedianFinder</span>:</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        initialize your data structure here.</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        self.big_hp = []</span><br><span class="line">        self.small_hp = []</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addNum</span><span class="params">(self, num: int)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        <span class="keyword">if</span> len(self.big_hp) != len(self.small_hp):</span><br><span class="line">            heappush(self.big_hp, num)</span><br><span class="line">            heappush(self.small_hp, -heappop(self.big_hp))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            heappush(self.small_hp, -num)</span><br><span class="line">            heappush(self.big_hp, -heappop(self.small_hp))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findMedian</span><span class="params">(self)</span> -&gt; float:</span></span><br><span class="line">        <span class="keyword">return</span> self.big_hp[<span class="number">0</span>] <span class="keyword">if</span> len(self.big_hp) != len(self.small_hp) <span class="keyword">else</span> (-self.small_hp[<span class="number">0</span>] + self.big_hp[<span class="number">0</span>]) / <span class="number">2.0</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度：<ul>
+<li>查找中位数 O(1) ： 获取堆顶元素使用 O(1) 时间；</li>
+<li>添加数字 O(logN) ： 堆的插入和弹出操作使用 O(logN) 时间。</li>
+</ul>
+</li>
+<li>空间复杂度 O(N) ： 其中 N 为数据流中的元素数量，小顶堆 A 和大顶堆 B 最多同时保存 N 个元素。</li>
+</ul>
+<h3 id="42-连续子数组的最大和"><a href="#42-连续子数组的最大和" class="headerlink" title="42. 连续子数组的最大和"></a>42. <a href="https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/" target="_blank" rel="noopener">连续子数组的最大和</a></h3><p>输入一个整型数组，数组中的一个或连续多个整数组成一个子数组。求所有子数组的和的最大值。要求时间复杂度为 O(n)。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: nums &#x3D; [-2,1,-3,4,-1,2,1,-5,4]</span><br><span class="line">输出: 6</span><br><span class="line">解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。</span><br></pre></td></tr></table></figure>
+
+<p><strong>思路</strong>：利用动态规划，设动态规划列表 dp，dp[ i ] 代表以元素 nums[ i ] 为结尾的连续子数组最大和，由于 dp[ i ] 只与 dp[ i - 1] 和 nums[ i ] 有关系，因此可以将原数组 nums 用作 dp 列表，即直接在 nums 上修改即可。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxSubArray</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(nums)):</span><br><span class="line">            nums[i] += max(nums[i - <span class="number">1</span>], <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> max(nums)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度 O(N) ： 线性遍历数组 nums 即可获得结果，使用 O(N) 时间。</li>
+<li>空间复杂度 O(1) ： 使用常数大小的额外空间。</li>
+</ul>
+<h3 id="43-1-n-整数中-1-出现的次数"><a href="#43-1-n-整数中-1-出现的次数" class="headerlink" title="43. 1-n 整数中 1 出现的次数"></a>43. <a href="https://leetcode-cn.com/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/" target="_blank" rel="noopener">1-n 整数中 1 出现的次数</a></h3><p>输入一个整数 n ，求 1～n 这 n 个整数的十进制表示中 1 出现的次数。<br>例如，输入 12，1～12 这些整数中包含 1 的数字有 1、10、11 和 12 ，1 一共出现了 5 次</p>
+<p><strong>思路</strong>：归纳总结，根据当前位 cur 值的不同，分为以下三种情况：</p>
+<ol>
+<li>当 <code>cur = 0</code> 时：此位 1 的出现次数只由高位 high 决定，计算公式为：<code>high × digit</code>。</li>
+</ol>
+<img src="https://pic.leetcode-cn.com/78e60b6c2ada7434ba69643047758e113fa732815f7c53791271c5e0f123687c-Picture1.png" style="zoom:50%;" />
+
+<ol>
+<li>当 <code>cur = 1</code> 时：此位 1 的出现次数由高位 high 和低位 low 决定，计算公式为 <code>high x digit + low + 1</code></li>
+</ol>
+<img src="https://pic.leetcode-cn.com/58c7e6472155b49923b48daac10bd438b68e9504690cf45d5e739f3a8cb9cee1-Picture2.png" style="zoom:50%;" />
+
+<ol>
+<li>当 <code>cur = 2、3...9</code> 时：此位 1 的出现次数只由高位 high 决定，计算公式为 <code>(high + 1) x digit</code>。</li>
+</ol>
+<img src="https://pic.leetcode-cn.com/0e51d37b434ef0ad93882cdcb832f867e18b872833c0c360ad4580eb9ed4aeda-Picture3.png" style="zoom:50%;" />
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countDigitOne</span><span class="params">(self, n: int)</span> -&gt; int:</span></span><br><span class="line">        digit, res = <span class="number">1</span>, <span class="number">0</span></span><br><span class="line">        high, cur, low = n // <span class="number">10</span>, n % <span class="number">10</span>, <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> high != <span class="number">0</span> <span class="keyword">or</span> cur != <span class="number">0</span>:  <span class="comment"># 当 high 和 cur 同时为 0 时，说明已经越过最高位，因此跳出</span></span><br><span class="line">            <span class="keyword">if</span> cur == <span class="number">0</span>: res += high * digit</span><br><span class="line">            <span class="keyword">elif</span> cur == <span class="number">1</span>: res += high * digit + low + <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>: res += (high + <span class="number">1</span>) * digit</span><br><span class="line">            low += cur * digit  <span class="comment"># 将 cur 加入 low ，组成下轮 low</span></span><br><span class="line">            cur = high % <span class="number">10</span>  <span class="comment"># 下轮 cur 是本轮 high 的最低位</span></span><br><span class="line">            high //= <span class="number">10</span>  <span class="comment"># 将本轮 high 最低位删除，得到下轮 high</span></span><br><span class="line">            digit *= <span class="number">10</span>  <span class="comment"># 位因子每轮 × 10</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="44-数字序列中某一位的数字"><a href="#44-数字序列中某一位的数字" class="headerlink" title="44. 数字序列中某一位的数字"></a>44. <a href="https://leetcode-cn.com/problems/shu-zi-xu-lie-zhong-mou-yi-wei-de-shu-zi-lcof/" target="_blank" rel="noopener">数字序列中某一位的数字</a></h3><p>数字以 0123456789101112131415… 的格式序列化到一个字符序列中。在这个序列中，第 5 位（从下标 0 开始计数）是 5，第 13 位是 1，第 19 位是 4，等等。</p>
+<p>请写一个函数，求任意第 n 位对应的数字。</p>
+<p><strong>思路</strong>：</p>
+<img src="https://pic.leetcode-cn.com/2cd7d8a6a881b697a43f153d6c10e0e991817d78f92b9201b6ab71e44cb619de-Picture1.png" style="zoom:50%;" />
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findNthDigit</span><span class="params">(self, n: int)</span> -&gt; int:</span></span><br><span class="line">        digit, start, count = <span class="number">1</span>, <span class="number">1</span>, <span class="number">9</span></span><br><span class="line">        <span class="keyword">while</span> n &gt; count: <span class="comment"># 1.确定所求数位的所在数字的位数</span></span><br><span class="line">            n -= count</span><br><span class="line">            start *= <span class="number">10</span></span><br><span class="line">            digit += <span class="number">1</span></span><br><span class="line">            count = <span class="number">9</span> * start * digit</span><br><span class="line">        num = start + (n - <span class="number">1</span>) // digit <span class="comment"># 2.确定所求数位所在的数字</span></span><br><span class="line">        <span class="keyword">return</span> int(str(num)[(n - <span class="number">1</span>) % digit]) <span class="comment"># 3.确定所求数位在 num 的哪一数位</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="45-把数组排成最小的数"><a href="#45-把数组排成最小的数" class="headerlink" title="45. 把数组排成最小的数"></a>45. <a href="https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/" target="_blank" rel="noopener">把数组排成最小的数</a></h3><p>输入一个非负整数数组，把数组里所有数字拼接起来排成一个数，打印能拼接出的所有数字中最小的一个。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minNumber</span><span class="params">(self, nums: List[int])</span> -&gt; str:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">fast_sort</span><span class="params">(l , r)</span>:</span></span><br><span class="line">            <span class="keyword">if</span> l &gt;= r: <span class="keyword">return</span></span><br><span class="line">            i, j = l, r</span><br><span class="line">            <span class="keyword">while</span> i &lt; j:</span><br><span class="line">                <span class="keyword">while</span> strs[j] + strs[l] &gt;= strs[l] + strs[j] <span class="keyword">and</span> i &lt; j: j -= <span class="number">1</span></span><br><span class="line">                <span class="keyword">while</span> strs[i] + strs[l] &lt;= strs[l] + strs[i] <span class="keyword">and</span> i &lt; j: i += <span class="number">1</span></span><br><span class="line">                strs[i], strs[j] = strs[j], strs[i]  <span class="comment"># 交换 i、j 位置的元素</span></span><br><span class="line">            strs[i], strs[l] = strs[l], strs[i]</span><br><span class="line">            fast_sort(l, i - <span class="number">1</span>)</span><br><span class="line">            fast_sort(i + <span class="number">1</span>, r)</span><br><span class="line">        </span><br><span class="line">        strs = [str(num) <span class="keyword">for</span> num <span class="keyword">in</span> nums]  <span class="comment"># 将列表中的元素转换为字符串</span></span><br><span class="line">        fast_sort(<span class="number">0</span>, len(strs) - <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">''</span>.join(strs)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="46-把数字翻译成字符串"><a href="#46-把数字翻译成字符串" class="headerlink" title="46. 把数字翻译成字符串"></a>46. <a href="https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/" target="_blank" rel="noopener">把数字翻译成字符串</a></h3><p>给定一个数字，我们按照如下规则把它翻译为字符串：0 翻译成 “a” ，1 翻译成 “b”，……，11 翻译成 “l”，……，25 翻译成 “z”。一个数字可能有多个翻译。请编程实现一个函数，用来计算一个数字有多少种不同的翻译方法。</p>
+<p> <strong>思路</strong>：利用动态规划，设第 i 为上的数字以 $x_i$ 来表示，则：</p>
+<ul>
+<li>dp[i]：以 $x_i$ 为结尾的数字的翻译方案数量。</li>
+<li>转移方程：若 $x_i$ 和 $x_{i-1}$ 组成的两位数可以被翻译，则 <code>dp[i] = dp[i - 1] + dp[i - 2]</code>；否则 <code>dp[i] = dp[i - 1]</code>。</li>
+<li>初始状态：<code>dp[o] = dp[1] = 1</code>，即 “无数字” 和 “第 1 位数字” 的翻译方法数量均为 1。</li>
+<li>返回值：<code>dp[n]</code>，此数字的翻译方案数量。</li>
+<li>空间使用优化： 由于 dp[i] 只与 dp[i - 1] 有关，因此可使用两个变量 a, b 分别记录 dp[i], dp[i - 1]，两变量交替前进即可。此方法可省去 dp 列表使用的 O(N) 的额外空间。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">translateNum</span><span class="params">(self, num: int)</span> -&gt; int:</span></span><br><span class="line">        s = str(num)</span><br><span class="line">        a = b = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>, len(s) + <span class="number">1</span>):</span><br><span class="line">            a, b = (a + b <span class="keyword">if</span> <span class="string">"10"</span> &lt;= s[i - <span class="number">2</span>:i] &lt;= <span class="string">"25"</span> <span class="keyword">else</span> a), a</span><br><span class="line">        <span class="keyword">return</span> a</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度 O(N) ： N 为字符串 s 的长度（即数字 num 的位数 log(num) ），其决定了循环次数。</li>
+<li>空间复杂度 O(N) ： 字符串 s 使用 O(N) 大小的额外空间。</li>
+</ul>
+<p>利用求余运算 <code>num % 10</code> 和求整运算 <code>num // 10</code>，可获取数字 num 的各位数字（获取顺序为个位、十位、百位…）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">translateNum</span><span class="params">(self, num: int)</span> -&gt; int:</span></span><br><span class="line">        a = b = <span class="number">1</span></span><br><span class="line">        y = num % <span class="number">10</span></span><br><span class="line">        <span class="keyword">while</span> num != <span class="number">0</span>:</span><br><span class="line">            num //= <span class="number">10</span></span><br><span class="line">            x = num % <span class="number">10</span></span><br><span class="line">            a, b = (a + b <span class="keyword">if</span> <span class="number">10</span> &lt;= <span class="number">10</span> * x + y &lt;= <span class="number">25</span> <span class="keyword">else</span> a), a</span><br><span class="line">            y = x</span><br><span class="line">        <span class="keyword">return</span> a</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度 O(N) ： N 为字符串 s 的长度（即数字 num 的位数 log(num) ），其决定了循环次数。</li>
+<li>空间复杂度 O(1) ： 几个变量使用常数大小的额外空间。</li>
+</ul>
+<h3 id="47-礼物的最大价值"><a href="#47-礼物的最大价值" class="headerlink" title="47. 礼物的最大价值"></a>47. <a href="https://leetcode-cn.com/problems/li-wu-de-zui-da-jie-zhi-lcof/" target="_blank" rel="noopener">礼物的最大价值</a></h3><p>在一个 m*n 的棋盘的每一格都放有一个礼物，每个礼物都有一定的价值（价值大于 0）。你可以从棋盘的<strong>左上角</strong>开始拿格子里的礼物，并每次向右或者向下移动一格、直到到达棋盘的<strong>右下角</strong>。给定一个棋盘及其上面的礼物的价值，请计算你最多能拿到多少价值的礼物？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入: </span><br><span class="line">[</span><br><span class="line">  [1,3,1],</span><br><span class="line">  [1,5,1],</span><br><span class="line">  [4,2,1]</span><br><span class="line">]</span><br><span class="line">输出: 12</span><br><span class="line">解释: 路径 1→3→5→2→1 可以拿到最多价值的礼物</span><br></pre></td></tr></table></figure>
+
+<p><strong>思路</strong>：利用动态规划，将 grid 看做 dp 数组，节省空间。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxValue</span><span class="params">(self, grid: List[List[int]])</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(grid)):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(len(grid[<span class="number">0</span>])):</span><br><span class="line">                <span class="keyword">if</span> i == <span class="number">0</span> <span class="keyword">and</span> j == <span class="number">0</span>: <span class="keyword">continue</span></span><br><span class="line">                <span class="keyword">if</span> i == <span class="number">0</span>: grid[i][j] += grid[i][j - <span class="number">1</span>]</span><br><span class="line">                <span class="keyword">elif</span> j == <span class="number">0</span>: grid[i][j] += grid[i - <span class="number">1</span>][j]</span><br><span class="line">                <span class="keyword">else</span>: grid[i][j] += max(grid[i][j - <span class="number">1</span>], grid[i - <span class="number">1</span>][j])</span><br><span class="line">        <span class="keyword">return</span> grid[<span class="number">-1</span>][<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="48-最长不含重复字符的子字符串"><a href="#48-最长不含重复字符的子字符串" class="headerlink" title="48. 最长不含重复字符的子字符串"></a>48. <a href="https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/" target="_blank" rel="noopener">最长不含重复字符的子字符串</a></h3><p>请从字符串中找出一个最长的不包含重复字符的子字符串，计算该最长子字符串的长度。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;abcabcbb&quot;</span><br><span class="line">输出: 3 </span><br><span class="line">解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。</span><br></pre></td></tr></table></figure>
+
+<p><strong>思路 1</strong>：动态规划 + 哈希表。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(self, s: str)</span> -&gt; int:</span></span><br><span class="line">        dic = &#123;&#125;</span><br><span class="line">        res = tem = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(len(s)):</span><br><span class="line">            i = dic.get(s[j], <span class="number">-1</span>)  <span class="comment"># 与当前字符值相同的字符的最近的位置，没有则为 -1</span></span><br><span class="line">            dic[s[j]] = j  <span class="comment"># 存储当前字符的位置信息</span></span><br><span class="line">            <span class="comment"># 1、tem &lt; j - i：与当前字符值相同的字符在 tem 的长度外，长度直接 + 1 即可</span></span><br><span class="line">            <span class="comment"># 2、tem &gt;= j - i：与当前字符值相同的字符在 tem 的长度内，长度为 j - i</span></span><br><span class="line">            tem = tem + <span class="number">1</span> <span class="keyword">if</span> tem &lt; j - i <span class="keyword">else</span> j - i  <span class="comment"># 到当前字符位置，最长的不重复子字符串的长度</span></span><br><span class="line">            res = max(res, tem)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度 O(N) ： 其中 N 为字符串长度，动态规划需遍历计算 dp 列表。</li>
+<li>空间复杂度 O(1) ： 字符的 ASCII 码范围为 0 ~ 127 ，哈希表 dic 最多使用 <code>O(128) = O(1)</code> 大小的额外空间。</li>
+</ul>
+<p><strong>思路 2</strong>：双指针 + 哈希表。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(self, s: str)</span> -&gt; int:</span></span><br><span class="line">        dic = &#123;&#125;</span><br><span class="line">        res, i = <span class="number">0</span>, <span class="number">-1</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(len(s)):</span><br><span class="line">            <span class="keyword">if</span> s[j] <span class="keyword">in</span> dic:</span><br><span class="line">                i = max(i, dic[s[j]])  <span class="comment"># 更新左指针 i</span></span><br><span class="line">            dic[s[j]] = j  <span class="comment"># 哈希表记录</span></span><br><span class="line">            res = max(res, j - i)  <span class="comment"># 更新结果</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="49-丑数"><a href="#49-丑数" class="headerlink" title="49. 丑数"></a>49. <a href="https://leetcode-cn.com/problems/chou-shu-lcof/" target="_blank" rel="noopener">丑数</a></h3><p>我们把只包含质因子 2、3 和 5 的数称作丑数（Ugly Number）。求按从小到大的顺序的第 n 个丑数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: n &#x3D; 10</span><br><span class="line">输出: 12</span><br><span class="line">解释: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 是前 10 个丑数。</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">nthUglyNumber</span><span class="params">(self, n: int)</span> -&gt; int:</span></span><br><span class="line">        dp, a, b, c = [<span class="number">1</span>] * n, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, n):</span><br><span class="line">            n2, n3, n5 = dp[a] * <span class="number">2</span>, dp[b] * <span class="number">3</span>, dp[c] * <span class="number">5</span></span><br><span class="line">            dp[i] = min(n2, n3, n5)</span><br><span class="line">            <span class="keyword">if</span> dp[i] == n2: a += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> dp[i] == n3: b += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> dp[i] == n5: c += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> dp[<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="50-第一个只出现一次的字符"><a href="#50-第一个只出现一次的字符" class="headerlink" title="50. 第一个只出现一次的字符"></a>50. <a href="https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/" target="_blank" rel="noopener">第一个只出现一次的字符</a></h3><p>在字符串 s 中找出第一个只出现一次的字符。如果没有，返回一个单空格。 s 只包含小写字母。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s &#x3D; &quot;abaccdeff&quot;</span><br><span class="line">返回 &quot;b&quot;</span><br><span class="line"></span><br><span class="line">s &#x3D; &quot;&quot; </span><br><span class="line">返回 &quot; &quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>思路</strong>：利用哈希表存储字符及字符是否自出现一次，出现一次用 True 表示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">firstUniqChar</span><span class="params">(self, s: str)</span> -&gt; str:</span></span><br><span class="line">        dic = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> s:</span><br><span class="line">            dic[c] = <span class="keyword">not</span> c <span class="keyword">in</span> dic  <span class="comment"># not c in dic 整体为一个布尔值</span></span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> dic[c]: <span class="keyword">return</span> c</span><br><span class="line">        <span class="keyword">return</span> <span class="string">" "</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度 O(N) ： N 为字符串 s 的长度；需遍历 s 两轮，使用 O(N) ；HashMap 查找的操作复杂度为 O(1) ；</li>
+<li>空间复杂度 O(N) ： HashMap 需存储 N 个字符的键值对，使用 O(N) 大小的额外空间。</li>
+</ul>
+<h3 id="51-数组中的逆序对"><a href="#51-数组中的逆序对" class="headerlink" title="51. 数组中的逆序对"></a>51. <a href="https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/" target="_blank" rel="noopener">数组中的逆序对</a></h3><p>在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组，求出这个数组中的逆序对的总数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [7,5,6,4]</span><br><span class="line">输出: 5</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reversePairs</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line">        </span><br><span class="line">        l = len(nums)</span><br><span class="line">        <span class="keyword">if</span> l &lt; <span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        temp = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> range(l)]</span><br><span class="line">        <span class="keyword">return</span> self.count_inversion_pairs(nums, <span class="number">0</span>, l - <span class="number">1</span>, temp)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">count_inversion_pairs</span><span class="params">(self, nums, l, r, temp)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        在数组 nums 的区间 [l,r] 统计逆序对</span></span><br><span class="line"><span class="string">        :param nums:</span></span><br><span class="line"><span class="string">        :param l: 待统计数组的左边界，可以取到</span></span><br><span class="line"><span class="string">        :param r: 待统计数组的右边界，可以取到</span></span><br><span class="line"><span class="string">        :param temp:</span></span><br><span class="line"><span class="string">        :return:</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="comment"># 极端情况下，就是只有 1 个元素的时候</span></span><br><span class="line">        <span class="keyword">if</span> l == r:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        mid = l + (r - l) // <span class="number">2</span></span><br><span class="line">        left_pairs = self.count_inversion_pairs(nums, l, mid, temp)</span><br><span class="line">        right_pairs = self.count_inversion_pairs(nums, mid + <span class="number">1</span>, r, temp)</span><br><span class="line"></span><br><span class="line">        merge_pairs = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 代码走到这里的时候，</span></span><br><span class="line">        <span class="comment"># [l, mid] 已经完成了排序并且计算好逆序对</span></span><br><span class="line">        <span class="comment"># [mid + 1, r] 已经完成了排序并且计算好逆序对</span></span><br><span class="line">        <span class="comment"># 如果 nums[mid] &lt;= nums[mid + 1]，此时就不存在逆序对</span></span><br><span class="line">        <span class="comment"># 当 nums[mid] &gt; nums[mid + 1] 的时候，就要继续计算逆序对</span></span><br><span class="line">        <span class="keyword">if</span> nums[mid] &gt; nums[mid + <span class="number">1</span>]:</span><br><span class="line">            <span class="comment"># 在归并的过程中计算逆序对</span></span><br><span class="line">            merge_pairs = self.merge_and_count(nums, l, mid, r, temp)</span><br><span class="line">        <span class="comment"># 走到这里有 nums[mid] &lt;= nums[mid + 1] 成立，已经是顺序结构</span></span><br><span class="line">        <span class="keyword">return</span> left_pairs + right_pairs + merge_pairs</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">merge_and_count</span><span class="params">(self, nums, l, mid, r, temp)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        前：[2,3,5,8]，后：[4,6,7,12]</span></span><br><span class="line"><span class="string">        我们只需要在后面数组元素出列的时候，数一数前面这个数组还剩下多少个数字，</span></span><br><span class="line"><span class="string">        因为"前"数组和"后"数组都有序，</span></span><br><span class="line"><span class="string">        因此，"前"数组剩下的元素个数 mid - i + 1 就是与"后"数组元素出列的这个元素构成的逆序对个数</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(l, r + <span class="number">1</span>):</span><br><span class="line">            temp[i] = nums[i]</span><br><span class="line">        i = l</span><br><span class="line">        j = mid + <span class="number">1</span></span><br><span class="line">        res = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> range(l, r + <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> i &gt; mid:</span><br><span class="line">                nums[k] = temp[j]</span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> j &gt; r:</span><br><span class="line">                nums[k] = temp[i]</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> temp[i] &lt;= temp[j]:</span><br><span class="line">                <span class="comment"># 不统计逆序对，只做排序</span></span><br><span class="line">                nums[k] = temp[i]</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">assert</span> temp[i] &gt; temp[j]</span><br><span class="line">                nums[k] = temp[j]</span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">                <span class="comment"># 快就快在这里，一次可以数出一个区间的个数的逆序对</span></span><br><span class="line">                <span class="comment"># 例：[7,8,9][4,6,9]，4 与 7 以及 7 前面所有的数都构成逆序对</span></span><br><span class="line">                res += (mid - i + <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="52-两个链表的第一个公共节点"><a href="#52-两个链表的第一个公共节点" class="headerlink" title="52. 两个链表的第一个公共节点"></a>52. <a href="https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/" target="_blank" rel="noopener">两个链表的第一个公共节点</a></h3><p>输入两个链表，找出它们的第一个公共节点。</p>
+<p><strong>思路</strong>：两指针分别从两个链表的头部出发，当到达尾部时，从另一个链表的头部继续出发，直到相遇时链表值相等，或到达末尾均为空时相等，返回相等时的链表值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getIntersectionNode</span><span class="params">(self, headA: ListNode, headB: ListNode)</span> -&gt; ListNode:</span></span><br><span class="line">        ha, hb = headA, headB</span><br><span class="line">        <span class="keyword">while</span> ha != hb:</span><br><span class="line">            ha = ha.next <span class="keyword">if</span> ha <span class="keyword">else</span> headB</span><br><span class="line">            hb = hb.next <span class="keyword">if</span> hb <span class="keyword">else</span> headA</span><br><span class="line">        <span class="keyword">return</span> ha</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法与数据结构</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/09/3.4.%E5%89%91%E6%8C%87offer%EF%BC%9A%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/08/17/3.5.%E5%89%91%E6%8C%87offer%EF%BC%9A%E7%AC%AC%E4%BA%94%E9%83%A8%E5%88%86/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          剑指offer：第五部分
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2020/08/05/3.3.%E5%89%91%E6%8C%87offer%EF%BC%9A%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">剑指offer：第三部分</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#39-数组中出现次数超过一半的数字"><span class="toc-number">1.</span> <span class="toc-text">39. 数组中出现次数超过一半的数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#40-最小的k个数"><span class="toc-number">2.</span> <span class="toc-text">40. 最小的k个数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#41-数据流中的中位数"><span class="toc-number">3.</span> <span class="toc-text">41. 数据流中的中位数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#42-连续子数组的最大和"><span class="toc-number">4.</span> <span class="toc-text">42. 连续子数组的最大和</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#43-1-n-整数中-1-出现的次数"><span class="toc-number">5.</span> <span class="toc-text">43. 1-n 整数中 1 出现的次数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#44-数字序列中某一位的数字"><span class="toc-number">6.</span> <span class="toc-text">44. 数字序列中某一位的数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#45-把数组排成最小的数"><span class="toc-number">7.</span> <span class="toc-text">45. 把数组排成最小的数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#46-把数字翻译成字符串"><span class="toc-number">8.</span> <span class="toc-text">46. 把数字翻译成字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#47-礼物的最大价值"><span class="toc-number">9.</span> <span class="toc-text">47. 礼物的最大价值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#48-最长不含重复字符的子字符串"><span class="toc-number">10.</span> <span class="toc-text">48. 最长不含重复字符的子字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#49-丑数"><span class="toc-number">11.</span> <span class="toc-text">49. 丑数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#50-第一个只出现一次的字符"><span class="toc-number">12.</span> <span class="toc-text">50. 第一个只出现一次的字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#51-数组中的逆序对"><span class="toc-number">13.</span> <span class="toc-text">51. 数组中的逆序对</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#52-两个链表的第一个公共节点"><span class="toc-number">14.</span> <span class="toc-text">52. 两个链表的第一个公共节点</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2020/08/09/3.4.%E5%89%91%E6%8C%87offer%EF%BC%9A%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86/",
+  owner: 'PotoCoder',
+  repo: 'PotoCoder.github.io',
+  oauth: {
+    client_id: 'cafd65475916610b1b6e',
+    client_secret: '5d7ab86e68286875545be408547c67fb2d0a2395',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
+
+
+
 
 
           </div>
@@ -248,9 +581,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
