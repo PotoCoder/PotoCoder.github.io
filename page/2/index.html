@@ -852,6 +852,99 @@
 
 
   
+    <article id="post-2.1.双指针" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/03/2.1.%E5%8F%8C%E6%8C%87%E9%92%88/">双指针</a>
+    </h1>
+  
+
+        
+        
+
+<a href="/2020/07/03/2.1.%E5%8F%8C%E6%8C%87%E9%92%88/" class="archive-article-date">
+  	<time datetime="2020-07-03T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>双指针主要用于遍历数组，两个指针指向不同的元素，从而协同完成任务。 </p>
+<h3 id="1-1-有序数组中的两数之和"><a href="#1-1-有序数组中的两数之和" class="headerlink" title="1.1 有序数组中的两数之和"></a>1.1 <a href="https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/" target="_blank" rel="noopener">有序数组中的两数之和</a></h3><p>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。<br>函数应该返回这两个下标值 <code>index1</code> 和 <code>index2</code>，其中 <code>index1</code> 必须小于 <code>index2</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">返回的下标值（index1 和 index2）不是从零开始的。</span><br><span class="line">你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: numbers &#x3D; [2, 7, 11, 15], target &#x3D; 9</span><br><span class="line">输出: [1,2]</span><br><span class="line">解释: 2 与 7 之和等于目标数 9 。因此 index1 &#x3D; 1, index2 &#x3D; 2 。</span><br></pre></td></tr></table></figure>
+
+<p>使用双指针，一个指针指向值较小的元素，一个指针指向值较大的元素。指向较小元素的指针从头向尾遍历，指向较大元素的指针从尾向头遍历。</p>
+<ul>
+<li>如果两个指针指向元素的和 <code>sum == target</code>，那么得到要求的结果；</li>
+<li>如果 <code>sum &gt; target</code>，移动较大的元素，使 <code>sum</code> 变小一些；</li>
+<li>如果 <code>sum &lt; target</code>，移动较小的元素，使 <code>sum</code> 变大一些。</li>
+</ul>
+<p>数组中的元素最多遍历一次，时间复杂度为 <code>O(N)</code>。只使用了两个额外变量，空间复杂度为 <code>O(1)</code>。</p>
+        
+          <a class="article-more-a" href="/2020/07/03/2.1.%E5%8F%8C%E6%8C%87%E9%92%88/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法思想</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/03/2.1.%E5%8F%8C%E6%8C%87%E9%92%88/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
     <article id="post-4.1列表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -914,99 +1007,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/07/03/4.1%E5%88%97%E8%A1%A8/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="post-2.1.双指针" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/03/2.1.%E5%8F%8C%E6%8C%87%E9%92%88/">双指针</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2020/07/03/2.1.%E5%8F%8C%E6%8C%87%E9%92%88/" class="archive-article-date">
-  	<time datetime="2020-07-03T03:43:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>双指针主要用于遍历数组，两个指针指向不同的元素，从而协同完成任务。 </p>
-<h3 id="1-1-有序数组中的两数之和"><a href="#1-1-有序数组中的两数之和" class="headerlink" title="1.1 有序数组中的两数之和"></a>1.1 <a href="https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/" target="_blank" rel="noopener">有序数组中的两数之和</a></h3><p>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。<br>函数应该返回这两个下标值 <code>index1</code> 和 <code>index2</code>，其中 <code>index1</code> 必须小于 <code>index2</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">返回的下标值（index1 和 index2）不是从零开始的。</span><br><span class="line">你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: numbers &#x3D; [2, 7, 11, 15], target &#x3D; 9</span><br><span class="line">输出: [1,2]</span><br><span class="line">解释: 2 与 7 之和等于目标数 9 。因此 index1 &#x3D; 1, index2 &#x3D; 2 。</span><br></pre></td></tr></table></figure>
-
-<p>使用双指针，一个指针指向值较小的元素，一个指针指向值较大的元素。指向较小元素的指针从头向尾遍历，指向较大元素的指针从尾向头遍历。</p>
-<ul>
-<li>如果两个指针指向元素的和 <code>sum == target</code>，那么得到要求的结果；</li>
-<li>如果 <code>sum &gt; target</code>，移动较大的元素，使 <code>sum</code> 变小一些；</li>
-<li>如果 <code>sum &lt; target</code>，移动较小的元素，使 <code>sum</code> 变大一些。</li>
-</ul>
-<p>数组中的元素最多遍历一次，时间复杂度为 <code>O(N)</code>。只使用了两个额外变量，空间复杂度为 <code>O(1)</code>。</p>
-        
-          <a class="article-more-a" href="/2020/07/03/2.1.%E5%8F%8C%E6%8C%87%E9%92%88/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/03/2.1.%E5%8F%8C%E6%8C%87%E9%92%88/">阅读全文 >></a>
         </p>
       
 
@@ -1189,11 +1189,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法与数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法与数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">
